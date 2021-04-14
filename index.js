@@ -94,6 +94,7 @@ axios({
   let result = getLatestRow2Json(csv)
   let percentage = calcPercentage(result, thailandPopulation)
   let progressbar = drawProgressBar(percentage, progressBarLength, barEmpty, barFull)
-  console.log(`${progressbar} ${percentage}%`);
+  let barPercent = `${progressbar} ${percentage}%`
+  console.log(barPercent);
 });
 
