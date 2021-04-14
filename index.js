@@ -5,6 +5,7 @@ let barEmpty = '░'
 let barFull = '▒'
 let delta = 5
 let progressBarLength = 20
+let progressPercent = ''
 
 const csvToJSON = (csv) => {
   var result = [];
@@ -94,7 +95,7 @@ axios({
   let result = getLatestRow2Json(csv)
   let percentage = calcPercentage(result, thailandPopulation)
   let progressbar = drawProgressBar(percentage, progressBarLength, barEmpty, barFull)
-  let barPercent = `${progressbar} ${percentage}%`
-  console.log(barPercent);
+  progressPercent = `${progressbar} ${percentage}%`
+  console.log(progressPercent);
 });
 
