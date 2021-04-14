@@ -1,0 +1,29 @@
+{
+  "name": "covid-tracker-twitter-bot",
+  "version": "1.0.0",
+  "description": "Covid vaccine tracker Twitter bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathakits/covid-tracker-twitter-bot.git"
+  },
+  "keywords": [
+    "covid",
+    "vaccine",
+    "tracker",
+    "twitter",
+    "bot"
+  ],
+  "author": "Nathakit Sae-Tan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nathakits/covid-tracker-twitter-bot/issues"
+  },
+  "homepage": "https://github.com/nathakits/covid-tracker-twitter-bot#readme",
+  "dependencies": {
+    "twitter-lite": "^1.1.0"
+  }
+}
