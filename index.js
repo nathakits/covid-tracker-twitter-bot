@@ -1,4 +1,6 @@
 const axios = require('axios').default;
+
+// global vars
 let csvData = 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/country_data/Thailand.csv'
 let thailandPopulation = 69.63 * 1000000
 let barEmpty = '░'
@@ -8,6 +10,7 @@ let progressBarLength = 20
 let progressPercent = ''
 let totalVaccinations = ''
 
+// functions
 const csvToJSON = (csv) => {
   var result = [];
   // split csv to lines
@@ -87,6 +90,7 @@ const drawProgressBar = (percentage, max, barEmpty, barFull) => {
   return progressBar
 }
 
+// get github csv and draw progress bar
 axios({
   method: 'get',
   url: csvData,
