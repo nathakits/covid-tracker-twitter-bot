@@ -6,6 +6,7 @@ let barFull = '▒'
 let delta = 5
 let progressBarLength = 20
 let progressPercent = ''
+let totalVaccinations = ''
 
 const csvToJSON = (csv) => {
   var result = [];
@@ -59,6 +60,7 @@ const getLatestRow2Json = (csv) => {
 
 const calcPercentage = (array, population) => {
   let vaccinated = array[0].people_fully_vaccinated
+  totalVaccinations = vaccinated
   let percentage = `${((vaccinated / population) * 100).toFixed(1)}`
   return percentage
 }
@@ -96,6 +98,7 @@ axios({
   let percentage = calcPercentage(result, thailandPopulation)
   let progressbar = drawProgressBar(percentage, progressBarLength, barEmpty, barFull)
   progressPercent = `${progressbar} ${percentage}%`
+  // console.log(totalVaccinations)
   console.log(progressPercent);
 });
 
