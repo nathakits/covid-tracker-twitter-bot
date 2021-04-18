@@ -1,14 +1,24 @@
+require('dotenv').config()
 const axios = require('axios').default;
+const Twitter = require('twitter-lite');
 
 // global vars
 let csvData = 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/country_data/Thailand.csv'
-let thailandPopulation = 69.63 * 1000000
+let thailandPopulation = 69.799 * 1000000
 let barEmpty = '░'
 let barFull = '▒'
 let delta = 5
 let progressBarLength = 20
 let progressPercent = ''
 let totalVaccinations = ''
+
+// API
+const client = new Twitter({
+  consumer_key: process.env.CONSUMER_KEY,
+  consumer_secret: process.env.CONSUMER_SECRET,
+  access_token_key: process.env.ACCESS_TOKEN_KEY,
+  access_token_secret: process.env.ACCESS_TOKEN_SECRET
+});
 
 // functions
 const csvToJSON = (csv) => {
@@ -64,7 +74,7 @@ const getLatestRow2Json = (csv) => {
 const calcPercentage = (array, population) => {
   let vaccinated = array[0].people_fully_vaccinated
   totalVaccinations = vaccinated
-  let percentage = `${((vaccinated / population) * 100).toFixed(1)}`
+  let percentage = `${((vaccinated / population) * 100).toFixed(2)}`
   return percentage
 }
 
@@ -90,6 +100,12 @@ const drawProgressBar = (percentage, max, barEmpty, barFull) => {
   return progressBar
 }
 
+async const tweetThread = (data) => {
+  await client.post("statuses/update", {
+    status: data,
+  })
+}
+
 // get github csv and draw progress bar
 axios({
   method: 'get',
@@ -102,7 +118,11 @@ axios({
   let percentage = calcPercentage(result, thailandPopulation)
   let progressbar = drawProgressBar(percentage, progressBarLength, barEmpty, barFull)
   progressPercent = `${progressbar} ${percentage}%`
-  // console.log(totalVaccinations)
   console.log(progressPercent);
+  // post tweet
+  tweetThread(progressPercent).then(result => {
+    console.log(`Successfully tweeted: ${result}`);
+  }).catch(console.error);
 });
+
 
