@@ -27,5 +27,8 @@
   "dependencies": {
     "axios": "^0.21.1",
     "twitter-lite": "^1.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
 }
