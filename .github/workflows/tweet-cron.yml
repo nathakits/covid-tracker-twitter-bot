@@ -1,0 +1,29 @@
+name: Tweet Cron
+
+on:
+  schedule:
+    - cron: 0 10 * * *
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+    # post tweet
+    - name: Post tweet - Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build
+      env: 
+       CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+       CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+       ACCESS_TOKEN_KEY: ${{ secrets.ACCESS_TOKEN_KEY }}
+       ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
