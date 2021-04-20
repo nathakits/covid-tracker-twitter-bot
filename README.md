@@ -1,8 +1,8 @@
-<!-- <h1 align="center">
-	<a href="https://github.com/nathakits/spottie-figma-plugin">
-		<img src="assets/plugin-file-cover.jpg" alt="Spottie"/>
+<h1 align="center">
+  <a href="https://twitter.com/THVaccinecount">
+    <img src="assets/logo-200px.png" alt="Twitter bot logo"/>
 	</a>
-</h1> -->
+</h1>
 
 <h4 align="center">
   Twitter Covid-19 vaccine bot for Thailand
