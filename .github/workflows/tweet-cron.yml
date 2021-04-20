@@ -3,6 +3,7 @@ name: Tweet Cron
 on:
   schedule:
     - cron: '30 11 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
