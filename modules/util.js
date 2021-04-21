@@ -1,4 +1,6 @@
 // parsing csv file to json obj
+const time = require('./time')
+
 let delta = 5
 let totalVaccinations = ''
 
@@ -87,11 +89,39 @@ const drawProgressBar = (percentage, max, barEmpty, barFull) => {
   return progressBar
 }
 
+const replaceChars = (res) => {
+  return new Promise(resolve => {
+    let firstPass = res.text.replace(/จ ํานวน/g, 'จำนวน')
+    let secondPass = firstPass.replace(/รําย/g, 'ราย')
+    resolve(secondPass)
+  })
+}
+
+const matchAll = (text, array) => {
+  return new Promise(resolve => {
+    let arr = [{
+      date: time.currentDateTime
+    }]
+    array.forEach(regex => {
+      let found = text.match(regex)
+      arr.push(found.groups)
+      resolve(arr)
+    })
+  })
+}
+
+const scrapePDF = async (res, regexArr) => {
+  let text = await replaceChars(res)
+  let matched = await matchAll(text, regexArr)
+  return matched
+}
+
 module.exports = {
   csvToJSON,
   getLatestRow2Json,
   calcPercentageCSV,
   calcPercentageJSON,
   drawProgressBar,
-  totalVaccinations
+  scrapePDF,
+  totalVaccinations,
 }
