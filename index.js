@@ -28,8 +28,8 @@ axios({
   console.log(thread);
   // post tweet
   tweetThread(thread)
-    .then(res => {
-      console.log(`Successfully tweeted: ${res}`);
+    .then(() => {
+      console.log(`Successfully tweeted`);
     }).catch(err => {
       let errors = err.errors
       console.log(errors);
