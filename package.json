@@ -4,6 +4,7 @@
   "description": "Covid vaccine tracker Twitter bot",
   "main": "index.js",
   "scripts": {
+    "scrape": "node ./scraper/thailand.js",
     "build": "node index.js",
     "test": "node test.js"
   },
@@ -26,6 +27,7 @@
   "homepage": "https://github.com/nathakits/covid-tracker-twitter-bot#readme",
   "dependencies": {
     "axios": "^0.21.1",
+    "crawler-request": "^1.2.2",
     "twitter-lite": "^1.1.0"
   },
   "devDependencies": {

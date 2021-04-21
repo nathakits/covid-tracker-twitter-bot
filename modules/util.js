@@ -52,9 +52,15 @@ const getLatestRow2Json = (csv) => {
   return result
 }
 
-const calcPercentage = (array, population) => {
+const calcPercentageCSV = (array, population) => {
   let vaccinated = array[0].people_fully_vaccinated
   totalVaccinations = vaccinated
+  let percentage = `${((vaccinated / population) * 100).toFixed(2)}`
+  return percentage
+}
+
+const calcPercentageJSON = (array, population) => {
+  let vaccinated = array[2].twoDoses.replace(',', '')
   let percentage = `${((vaccinated / population) * 100).toFixed(2)}`
   return percentage
 }
@@ -84,7 +90,8 @@ const drawProgressBar = (percentage, max, barEmpty, barFull) => {
 module.exports = {
   csvToJSON,
   getLatestRow2Json,
-  calcPercentage,
+  calcPercentageCSV,
+  calcPercentageJSON,
   drawProgressBar,
   totalVaccinations
 }
