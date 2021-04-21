@@ -21,7 +21,9 @@ const replaceChars = (res) => {
 
 const matchAll = (text, array) => {
   return new Promise(resolve => {
-    let arr = []
+    let arr = [
+      {date: d}
+    ]
     array.forEach(regex => {
       let found = text.match(regex)
       arr.push(found.groups)
