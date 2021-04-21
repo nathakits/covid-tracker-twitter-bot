@@ -22,6 +22,7 @@ const tweetThread = async (thread) => {
       auto_populate_reply_metadata: true
     });
     lastTweetID = tweet.id_str;
+    return status
   }
 }
 
