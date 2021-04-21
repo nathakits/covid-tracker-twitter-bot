@@ -15,7 +15,7 @@ let thread = [];
 // read scraped vaccine json and tweet
 const calcProgressBar = () => {
   let percentage = util.calcPercentageJSON(data, thailandPopulation)
-  let progressbar = util.drawProgressBar(50, progressBarLength, barEmpty, barFull)
+  let progressbar = util.drawProgressBar(percentage, progressBarLength, barEmpty, barFull)
   progressPercent = `${progressbar} ${percentage}%`
   thread.push(progressPercent)
   tweetThread(thread)

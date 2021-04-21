@@ -60,7 +60,7 @@ const calcPercentageCSV = (array, population) => {
 }
 
 const calcPercentageJSON = (array, population) => {
-  let vaccinated = array[2].twoDoses.replace(',', '')
+  let vaccinated = array[3].twoDoses.replace(',', '')
   let percentage = `${((vaccinated / population) * 100).toFixed(2)}`
   return percentage
 }

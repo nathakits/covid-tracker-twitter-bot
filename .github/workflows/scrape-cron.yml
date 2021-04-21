@@ -23,3 +23,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run scrape
+    - name: Commit json
+      run: |
+        git config user.name "nathakits"
+        git config user.email nathakit.tan@gmail.com
+        git add .
+        git commit -m "update vaccine json"
+        git push
