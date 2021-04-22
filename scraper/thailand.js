@@ -6,7 +6,7 @@ const time = require('../modules/time')
 const { scrapePDF2JSON } = require('../modules/util')
 
 // vars
-let pdfUrl = `https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-${time.formattedMonth}-${21}.pdf`
+let pdfUrl = `https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-${time.formattedMonth}-${time.date}.pdf`
 let regexArray = [
   /\( ข้อมูล ณ วันที่ (?<date>.{1,30}) เวลา (?<time>.{1,10}) น. \)/,
   /ผู้ที่ได้รับวัคซีนสะสม (.{1,100}) ทั้งหมด (?<total_vaccinations>.{1,10}) โดส/,
