@@ -18,10 +18,10 @@
 ## Twitter bot
 https://twitter.com/THVaccinecount
 
-## Installation
-
 ### Twitter Developer API
 This project uses Twitter developer API so you need to get a Twitter developer account.
+
+## Installation
 
 ```bash
 # install dependencies
