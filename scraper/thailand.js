@@ -17,9 +17,14 @@ crawler(pdfUrl)
       let stringified = JSON.stringify(data, null, 2)
       console.log(stringified);
       fs.writeFileSync('./data/vaccinations.json', stringified)
+    }).catch(err => {
+      console.log(`Scrape error: PDF URL doesn't exist`);
+      console.log(err);
+      process.exit(1)
     })
   })
   .catch(err => {
+    console.log(`Crawler error`)
     console.log(err);
     process.exit(1)
   });
