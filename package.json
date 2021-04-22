@@ -28,6 +28,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "crawler-request": "^1.2.2",
+    "csv": "^5.5.0",
     "twitter-lite": "^1.1.0"
   },
   "devDependencies": {
