@@ -1,14 +1,10 @@
-[
-  {
-    "date": "2021-3-22 19:9:20PM"
-  },
-  {
-    "totalVaccinations": "712,610"
-  },
-  {
-    "singleDose": "604,947"
-  },
-  {
-    "twoDoses": "107,663"
-  }
-]
+{
+  "scrape_datetime": "23-04-2021 0:9:21AM",
+  "country": "Thailand",
+  "vaccine": "Oxford/AstraZeneca, Sinovac",
+  "date": "20-04-2021",
+  "total_vaccinations": "712,610",
+  "people_vaccinated": "604,947",
+  "people_fully_vaccinated": "107,663",
+  "source_url": "https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-21.pdf"
+}
