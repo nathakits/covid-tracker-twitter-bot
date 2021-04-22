@@ -8,11 +8,12 @@
   Twitter Covid-19 vaccine bot for Thailand
 </h4>
 
-<!-- <div align="center">
-  <a href="https://github.com/nathakits/spottie-figma-plugin/actions/workflows/node.js.yml">
-    <img src="https://github.com/nathakits/spottie-figma-plugin/actions/workflows/node.js.yml/badge.svg?branch=master" alt="Node.js CI">
+<div align="center">
+  <a href="https://github.com/nathakits/covid-tracker-twitter-bot/actions/workflows/scrape-tweet-cron.yml">
+    <img src="https://github.com/nathakits/covid-tracker-twitter-bot/actions/workflows/scrape-tweet-cron.yml/badge.svg" alt="Scrape and Tweet Cron CI">
   </a>
-</div> -->
+</div>
+
 <br>
 
 ## Twitter bot
