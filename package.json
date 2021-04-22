@@ -4,9 +4,9 @@
   "description": "Covid vaccine tracker Twitter bot",
   "main": "index.js",
   "scripts": {
-    "scrape": "node ./scraper/thailand.js",
-    "build": "node index.js",
-    "test": "node test.js"
+    "scrape": "node --trace-warnings ./scraper/thailand.js",
+    "build": "node --trace-warnings index.js",
+    "test": "node --trace-warnings test.js"
   },
   "repository": {
     "type": "git",
