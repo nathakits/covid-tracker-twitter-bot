@@ -1,5 +1,4 @@
 require('dotenv').config()
-const axios = require('axios').default;
 const util = require('./modules/util');
 const { tweetThread } = require('./modules/tweet');
 const data = require('./data/vaccinations.json')
