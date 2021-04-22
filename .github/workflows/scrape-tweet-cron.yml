@@ -1,0 +1,38 @@
+name: Scrape Data
+
+on:
+  schedule:
+    - cron: '30 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+    # scrape data from MOPH
+    - name: Scrape data - Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run scrape
+    - name: Commit and Push JSON
+      run: |
+        git config user.name "nathakits"
+        git config user.email nathakit.tan@gmail.com
+        git add .
+        git commit -m "auto update vaccine json"
+        git push
+    - run: npm run build
+      env: 
+       CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+       CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+       ACCESS_TOKEN_KEY: ${{ secrets.ACCESS_TOKEN_KEY }}
+       ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
