@@ -17,6 +17,6 @@ module.exports = {
   hours,
   minutes,
   seconds,
-  currentDate
+  currentDate,
   currentDateTime
 }
