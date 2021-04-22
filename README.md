@@ -19,7 +19,6 @@
 https://twitter.com/THVaccinecount
 
 ## Installation
-The project is separated into 2 sections. The main Figma code and the UI which is based on Vue and Tailwind.
 
 ### Twitter Developer API
 This project uses Twitter developer API so you need to get a Twitter developer account.
@@ -28,8 +27,14 @@ This project uses Twitter developer API so you need to get a Twitter developer a
 # install dependencies
 $ npm install
 
+# scrape vaccine data as JSON file
+$ npm run scrape
+
 # post tweet
 $ npm run build
+
+# post test tweet
+$ npm run test
 ```
 
 ## Contributing
