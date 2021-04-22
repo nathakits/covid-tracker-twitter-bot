@@ -16,7 +16,7 @@ crawler(pdfUrl)
     scrapePDF(res, regexArray).then((data) => {
       let stringified = JSON.stringify(data, null, 2)
       console.log(stringified);
-      fs.writeFileSync('./data/vaccinations.json', stringified)
+      fs.writeFileSync(`./data/vaccinations-${time.currentDate}.json`, stringified)
     }).catch(err => {
       console.log(`Scrape error: PDF URL doesn't exist`);
       console.log(err);
