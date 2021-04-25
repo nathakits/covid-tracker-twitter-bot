@@ -96,14 +96,15 @@ const replaceChars = (res) => {
     let secondPass = firstPass.replace(/รําย/g, 'ราย')
     let thirdPass = secondPass.replace(/เวลํา/g, 'เวลา')
     let forthPass = thirdPass.replace(/เมษํายน/g, 'เมษายน')
-    resolve(forthPass)
+    let fifthPass = forthPass.replace(/ขอมูล/g, 'ข้อมูล')
+    resolve(fifthPass)
   })
 }
 
 const matchAll = (text, array) => {
   return new Promise(resolve => {
     let arr = [{
-      scrape_datetime: time.currentDateTime,
+      last_updated: time.currentDateTime,
       country: `Thailand`,
       vaccine: `Oxford/AstraZeneca, Sinovac`
     }]
