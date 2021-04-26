@@ -1,3 +1,4 @@
+const fs = require('fs');
 // parsing csv file to json obj
 const time = require('./time')
 
@@ -97,6 +98,8 @@ const replaceChars = (res) => {
     let thirdPass = secondPass.replace(/เวลํา/g, 'เวลา')
     let forthPass = thirdPass.replace(/เมษํายน/g, 'เมษายน')
     let fifthPass = forthPass.replace(/ขอมูล/g, 'ข้อมูล')
+    // let stringify = JSON.stringify(fifthPass, null, 2)
+    // fs.writeFileSync(`./data/pdf_res.json`, stringify)
     resolve(fifthPass)
   })
 }
