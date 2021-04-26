@@ -13,7 +13,7 @@ let regexArray = [
   /\วันที่ (?<date>.{1,30}) เวลา (?<time>.{1,10}) น. \)/,
   /วัคซีนสะสม (.{1,100}) ทั้งหมด (?<total_vaccinations>.{1,10}) โดส/,
   /วัคซีนเข็มที่ 1 (.{1,3})นวน (?<people_vaccinated>.{1,10}) ราย/,
-  /รับวัคซีน 2 เข็ม\) (.{1,3})นวน (\W|.)(?<people_fully_vaccinated>.{1,10}) ราย/
+  /รับวัคซีน 2 เข็ม\).จำนวน(\s{1,5}|\s..\\n)(?<people_fully_vaccinated>\d{1,10}.{4})/
 ]
 
 const crawl = async () => {
