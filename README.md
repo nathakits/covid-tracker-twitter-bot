@@ -9,6 +9,9 @@
 </h4>
 
 <div align="center">
+  <a href="https://www.producthunt.com/posts/qr-coder?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-qr-coder" target="_blank">
+    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=293612&theme=light" alt="QR Coder - Generate QR codes with urls and insert into Figma. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
+  </a>
   <a href="https://github.com/nathakits/covid-tracker-twitter-bot/actions/workflows/scrape-tweet-cron.yml">
     <img src="https://github.com/nathakits/covid-tracker-twitter-bot/actions/workflows/scrape-tweet-cron.yml/badge.svg" alt="Scrape and Tweet Cron CI">
   </a>
