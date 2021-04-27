@@ -1,7 +1,10 @@
 {
-  "last_updated": "27-04-2021 9:45:13AM",
+  "last_updated": "27-04-2021 19:27:28PM",
   "country": "Thailand",
   "vaccine": "Oxford/AstraZeneca, Sinovac",
   "date": "26-04-2021",
+  "total_vaccinations": "1,227,032",
+  "people_vaccinated": "1,012,388",
+  "people_fully_vaccinated": "214,644",
   "source_url": "https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-27.pdf"
 }
