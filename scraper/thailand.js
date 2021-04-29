@@ -10,8 +10,11 @@ const { JSDOM } = require('jsdom')
 // vars
 let weburl = `https://ddc.moph.go.th/dcd/pagecontent.php?page=647&dept=dcd`
 let regexArray = [
-  /\วันที่ (?<date>.{1,30}) เวลา (?<time>.{1,10}) น. \)/,
-  /วัคซีนสะสม (.{1,100}) ทั้งหมด (?<total_vaccinations>.{1,10}) โดส/,
+  /Sinovac\s*จำนวนวัคซีนทั้งหมดที่ได้จัดสรร\s*จำนวน\s*(?<sinovac>\s*\d.\d*.\d*)/,
+  /AstraZeneca\s*จำนวนวัคซีนทั้งหมดที่ได้จัดสรร\s*จำนวน\s*(?<astrazeneca>\s*\d.\d*.\d*)/,
+  /รวมกํารจัดสรรวัคซีนทั้งหมด\s*จำนวน\s*(?<total_doses>\d*.\d*.\d*)/,
+  /\วันที่ (?<date>.{1,30}) เวลา 18.00 น. \)/,
+  /วัคซีนสะสม (.{1,100}) ทั้งหมด\s*(?<total_vaccinations>\d*.\d*.\d*)\s*โดส\s*ใน\s*77\s*จังหวัด/,
   /วัคซีนเข็มที่ 1 (.{1,3})นวน (?<people_vaccinated>.{1,10}) ราย/,
   /รับวัคซีน 2 เข็ม\).จำนวน(\s{1,5}|\s..\\n)(?<people_fully_vaccinated>\d{1,10}.{4})/
 ]
