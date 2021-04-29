@@ -3,7 +3,6 @@ const fs = require('fs');
 const time = require('./time')
 
 let delta = 5
-let totalVaccinations = ''
 
 const csvToJSON = (csv) => {
   var result = [];
@@ -57,7 +56,6 @@ const getLatestRow2Json = (csv) => {
 
 const calcPercentageCSV = (array, population) => {
   let vaccinated = array[0].people_fully_vaccinated
-  totalVaccinations = vaccinated
   let percentage = `${((vaccinated / population) * 100).toFixed(2)}`
   return percentage
 }
@@ -110,13 +108,15 @@ const matchAll = (text, array) => {
     let arr = [{
       last_updated: time.currentDateTime,
       country: `Thailand`,
-      vaccine: `Oxford/AstraZeneca, Sinovac`
+      vaccines: [`Oxford/AstraZeneca`, `Sinovac`]
     }]
+    let matched = []
     array.forEach(regex => {
       let found = text.match(regex)
-      arr.push(found.groups)
-      resolve(arr)
+      matched.push(found.groups)
     })
+    Object.assign(arr[0], ...matched)
+    resolve(arr)
   })
 }
 
@@ -136,7 +136,7 @@ const formatDate = (array) => {
       "พฤศจิกายน": "11",
       "ธันวาคม": "12",
     }
-    let raw_date = array[1].date
+    let raw_date = array[0].date
     let arr = raw_date.split(' ')
     let date = parseInt(arr[0])
     let month = parseInt(arr[1])
@@ -151,11 +151,9 @@ const formatDate = (array) => {
       }
     }
     // create a new obj
-    let fullDate = {
-      date: `${date}-${month}-${year}`
-    }
+    let fullDate = `${date}-${month}-${year}`
     // replace date obj with new formatted date obj
-    array[1] = fullDate
+    array[0].date = fullDate
     resolve(array)
   })
 }
@@ -182,5 +180,4 @@ module.exports = {
   calcPercentageJSON,
   drawProgressBar,
   scrapePDF2JSON,
-  totalVaccinations,
 }
