@@ -7,17 +7,26 @@ const formatMonth = (monthNum) => {
   }
 }
 
+const formatDate = (dateNum) => {
+  if (dateNum < 10) {
+    return (`0${dateNum}`)
+  } else {
+    return dateNum
+  }
+}
+
+
 let d = new Date()
 let year = d.getFullYear()
-let month = d.getMonth()
-let date = d.getDate()
+let month = formatMonth(d.getMonth())
+let date = formatDate(d.getDate())
 let hours = d.getHours()
 let minutes = d.getMinutes()
 let seconds = d.getSeconds()
 let ampm = hours >= 12 ? 'PM' : 'AM';
-let formattedMonth = formatMonth(month)
-let currentDate = `${date}-${formatMonth(month)}-${year}`
-let currentDateTime = `${date}-${formatMonth(month)}-${year} ${hours}:${minutes}:${seconds}${ampm}`
+let formattedMonth = month
+let currentDate = `${date}-${month}-${year}`
+let currentDateTime = `${date}-${month}-${year} ${hours}:${minutes}:${seconds}${ampm}`
 
 
 module.exports = {
