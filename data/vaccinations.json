@@ -1,16 +1,16 @@
 {
-  "last_updated": "03-05-2021 14:36:57PM",
+  "last_updated": "04-05-2021 15:4:54PM",
   "country": "Thailand",
   "vaccines": [
     "Oxford/AstraZeneca",
     "Sinovac"
   ],
-  "sinovac": "1,956,619",
-  "astrazeneca": "101,090",
-  "total_doses": "2,057,709",
-  "date": "2-NaN-2021",
-  "total_vaccinations": "1,486,907",
-  "people_vaccinated": "1,099,460",
-  "people_fully_vaccinated": "387,447",
-  "source_url": "https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-03.pdf"
+  "sinovac": "1,956,657",
+  "astrazeneca": "101,590",
+  "total_doses": "2,058,247",
+  "date": "03-05-2021",
+  "total_vaccinations": "1,498,617",
+  "people_vaccinated": "1,106,071",
+  "people_fully_vaccinated": "392,546",
+  "source_url": "https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-04.pdf"
 }
