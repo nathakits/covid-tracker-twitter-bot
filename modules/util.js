@@ -1,6 +1,6 @@
 const fs = require('fs');
 // parsing csv file to json obj
-const time = require('./time')
+const { currentDateTime, formatDate } = require('./time')
 
 let delta = 5
 
@@ -96,17 +96,18 @@ const replaceChars = (res) => {
     let thirdPass = secondPass.replace(/เวลํา/g, 'เวลา')
     let forthPass = thirdPass.replace(/เมษํายน/g, 'เมษายน')
     let fifthPass = forthPass.replace(/ขอมูล/g, 'ข้อมูล')
-    let sixthPass = fifthPass.replace(/\n/g, '')
-    // let stringify = JSON.stringify(sixthPass, null, 2)
+    let sixthPass = fifthPass.replace(/พฤษภําคม/g, 'พฤษภาคม')
+    let seventhPass = sixthPass.replace(/\n/g, '')
+    // let stringify = JSON.stringify(seventhPass, null, 2)
     // fs.writeFileSync(`./data/pdf_res.json`, stringify)
-    resolve(sixthPass)
+    resolve(seventhPass)
   })
 }
 
 const matchAll = (text, array) => {
   return new Promise(resolve => {
     let arr = [{
-      last_updated: time.currentDateTime,
+      last_updated: currentDateTime,
       country: `Thailand`,
       vaccines: [`Oxford/AstraZeneca`, `Sinovac`]
     }]
@@ -120,7 +121,7 @@ const matchAll = (text, array) => {
   })
 }
 
-const formatDate = (array) => {
+const formatThaiDate = (array) => {
   return new Promise(resolve => {
     thai_month = {
       "มกราคม": "01",
@@ -151,7 +152,7 @@ const formatDate = (array) => {
       }
     }
     // create a new obj
-    let fullDate = `${date}-${month}-${year}`
+    let fullDate = `${formatDate(date)}-${month}-${year}`
     // replace date obj with new formatted date obj
     array[0].date = fullDate
     resolve(array)
@@ -168,7 +169,7 @@ const cleanArray = (array) => {
 const scrapePDF2JSON = async (res, regexArr) => {
   let text = await replaceChars(res)
   let matched = await matchAll(text, regexArr)
-  let array = await formatDate(matched)
+  let array = await formatThaiDate(matched)
   let formattedJSON = await cleanArray(array)
   return formattedJSON
 }
