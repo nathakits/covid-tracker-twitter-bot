@@ -24,7 +24,6 @@ let hours = d.getHours()
 let minutes = d.getMinutes()
 let seconds = d.getSeconds()
 let ampm = hours >= 12 ? 'PM' : 'AM';
-let formattedMonth = month
 let currentDate = `${date}-${month}-${year}`
 let currentDateTime = `${date}-${month}-${year} ${hours}:${minutes}:${seconds}${ampm}`
 
@@ -33,11 +32,11 @@ module.exports = {
   d,
   year,
   month,
-  formattedMonth,
   date,
   hours,
   minutes,
   seconds,
   currentDate,
-  currentDateTime
+  currentDateTime,
+  formatDate
 }
