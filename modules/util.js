@@ -98,9 +98,11 @@ const replaceChars = (res) => {
     let fifthPass = forthPass.replace(/ขอมูล/g, 'ข้อมูล')
     let sixthPass = fifthPass.replace(/พฤษภําคม/g, 'พฤษภาคม')
     let seventhPass = sixthPass.replace(/\n/g, '')
-    // let stringify = JSON.stringify(seventhPass, null, 2)
+    let eighthPass = seventhPass.replace(/ได/g, 'ได้')
+    let ninthPass = eighthPass.replace(/จํานวน/g, 'จำนวน')
+    // let stringify = JSON.stringify(ninthPass, null, 2)
     // fs.writeFileSync(`./data/pdf_res.json`, stringify)
-    resolve(seventhPass)
+    resolve(ninthPass)
   })
 }
 
@@ -114,6 +116,7 @@ const matchAll = (text, array) => {
     let matched = []
     array.forEach(regex => {
       let found = text.match(regex)
+      console.log(found.groups);
       matched.push(found.groups)
     })
     Object.assign(arr[0], ...matched)
