@@ -28,7 +28,7 @@ const crawl = async () => {
     let url = div.children[0].children[0].href
     let matchDate = url.match(/2021-\d*.(?<date>\d*).+/)
     let pdfDate = matchDate.groups.date
-    if (pdfDate === time.date) {
+    if (parseInt(pdfDate) === time.date) {
       console.log(`PDF date matched`);
       crawler(url)
         .then(res => {
