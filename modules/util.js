@@ -99,7 +99,7 @@ const replaceChars = (res) => {
     let sixthPass = fifthPass.replace(/พฤษภําคม/g, 'พฤษภาคม')
     let seventhPass = sixthPass.replace(/\n/g, '')
     let eighthPass = seventhPass.replace(/ได/g, 'ได้')
-    let ninthPass = eighthPass.replace(/จํานวน/g, 'จำนวน')
+    let ninthPass = eighthPass.replace(/จ านวน/g, 'จำนวน')
     // let stringify = JSON.stringify(ninthPass, null, 2)
     // fs.writeFileSync(`./data/pdf_res.json`, stringify)
     resolve(ninthPass)
