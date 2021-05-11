@@ -10,7 +10,7 @@ const { JSDOM } = require('jsdom')
 // vars
 let weburl = `https://ddc.moph.go.th/dcd/pagecontent.php?page=688&dept=dcd`
 let regexArray = [
-  /Sinovac\s*.{3}วนวัคซีนทั้งหมดที่ได้จัดสรร\s*.{3}นวน\s*(?<sinovac>\s*\d.\d*.\d*)/,
+  /Sinovac\s*\W*นวนวัคซีนทั้งหมดที่ได้จัดสรร\s*.\W*นวน\s*(?<sinovac>\s*\d.\d*.\d*)/,
   /AstraZeneca\s*.{3}นวนวัคซีนทั้งหมดที่ได้จัดสรร\s*.{3}นวน\s*(?<astrazeneca>\s*\d.\d*.\d*)/,
   /ารจัดสรรวัคซีนทั้งหมด\s*.{3}นวน\s*(?<total_doses>\d*.\d*.\d*)/,
   /\วันที่\s*(?<date>.{1,30})\s*เวลา\s*18.00\s*น.\s*\)/,
@@ -38,6 +38,7 @@ const crawl = async () => {
             console.log(stringified);
             // write to json file
             fs.writeFileSync(`./data/vaccinations.json`, stringified)
+            console.log(`Scrape complete`);
             // update csv file TODO
             // fs.readFile('./data/Thailand.csv', (err, fileData) => {
             //   if (fileData) {
@@ -52,6 +53,7 @@ const crawl = async () => {
               console.log(res);
             }
             console.error(err);
+            console.log(`Scrape failed`);
             process.exit(1)
           })
         })
