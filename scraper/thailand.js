@@ -33,8 +33,6 @@ const crawl = async () => {
       crawler(url)
         .then(res => {
           scrapePDF2JSON(res, regexArray).then((data) => {
-            data.astrazeneca = data.astrazeneca.replace(/\s/g, "")
-            data.total_vaccinations = data.total_vaccinations.replace(/\s/g, "")
             data.source_url = url
             let stringified = JSON.stringify(data, null, 2)
             console.log(stringified);
