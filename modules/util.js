@@ -169,12 +169,18 @@ const cleanArray = (array) => {
   })
 }
 
+const calcVaccinesLeft(obj) {
+  let vaccines_left = obj.total_doses - obj.total_vaccinations
+  obj.vaccines_left = vaccines_left
+}
+
 const scrapePDF2JSON = async (res, regexArr) => {
   let text = await replaceChars(res)
   let matched = await matchAll(text, regexArr)
   let array = await formatThaiDate(matched)
   let formattedJSON = await cleanArray(array)
-  return formattedJSON
+  let calcJSON = await calcVaccinesLeft(formattedJSON)
+  return calcJSON
 }
 
 module.exports = {
