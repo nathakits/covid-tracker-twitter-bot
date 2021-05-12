@@ -117,6 +117,13 @@ const matchAll = (text, array) => {
     array.forEach(regex => {
       let found = text.match(regex)
       let cleanObj = { ...found.groups }
+      // remove whitespaces from matching regex
+      if (!cleanObj.date) {
+        Object.keys(cleanObj).forEach((val) => {
+          cleanObj[val] = cleanObj[val].replace(/\s/g, "")
+        });
+      }
+      console.log(cleanObj);
       matched.push(cleanObj)
     })
     Object.assign(arr[0], ...matched)
