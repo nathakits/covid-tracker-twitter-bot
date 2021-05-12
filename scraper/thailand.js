@@ -11,10 +11,10 @@ const { JSDOM } = require('jsdom')
 let weburl = `https://ddc.moph.go.th/dcd/pagecontent.php?page=688&dept=dcd`
 let regexArray = [
   /Sinovac\s*\W*นวนวัคซีนทั้งหมดที่ได้จัดสรร\s*.\W*นวน\s*(?<sinovac>\s*\d.\d*.\d*)/,
-  /AstraZeneca\s*.{3}นวนวัคซีนทั้งหมดที่ได้จัดสรร\s*.{3}นวน\s*(?<astrazeneca>\s*\d.\d*.\d*)/,
+  /AstraZeneca\s*\W*นวนวัคซีนทั้งหมดที่ได้จัดสรร\s*\W*นวน\s*(?<astrazeneca>\s*\d*.\s*\d*)/,
   /ารจัดสรรวัคซีนทั้งหมด\s*.{3}นวน\s*(?<total_doses>\d*.\d*.\d*)/,
   /\วันที่\s*(?<date>.{1,30})\s*เวลา\s*18.00\s*น.\s*\)/,
-  /วัคซีนสะสม (.{1,100}) ทั้งหมด\s*(?<total_vaccinations>\d*.\d*.\d*)\s*โดส\s*ใน\s*77\s*จังหวัด/,
+  /2564\s*ทั้งหมด\s*(?<total_vaccinations>\d*.\d*.\s*\d*)\s*โดส/,
   /วัคซีนเข็มที่ 1 (.{1,3})นวน (?<people_vaccinated>.{1,10}) ราย/,
   /รับวัคซีน 2 เข็ม\)\s*.{3}นวน\s*(?<people_fully_vaccinated>\d*.\d*\S\d*)/
 ]
@@ -33,6 +33,8 @@ const crawl = async () => {
       crawler(url)
         .then(res => {
           scrapePDF2JSON(res, regexArray).then((data) => {
+            data.astrazeneca = data.astrazeneca.replace(/\s/g, "")
+            data.total_vaccinations = data.total_vaccinations.replace(/\s/g, "")
             data.source_url = url
             let stringified = JSON.stringify(data, null, 2)
             console.log(stringified);
