@@ -61,7 +61,7 @@ const calcPercentageCSV = (array, population) => {
 }
 
 const calcPercentageJSON = (obj, population) => {
-  let vaccinated = obj.people_fully_vaccinated.replace(',', '')
+  let vaccinated = obj.people_fully_vaccinated.replace(/\s|,/g, '')
   let percentage = `${((vaccinated / population) * 100).toFixed(2)}`
   return percentage
 }
@@ -116,8 +116,8 @@ const matchAll = (text, array) => {
     let matched = []
     array.forEach(regex => {
       let found = text.match(regex)
-      console.log(found.groups);
-      matched.push(found.groups)
+      let cleanObj = { ...found.groups }
+      matched.push(cleanObj)
     })
     Object.assign(arr[0], ...matched)
     resolve(arr)
@@ -169,12 +169,23 @@ const cleanArray = (array) => {
   })
 }
 
+const calcVaccinesLeft = (obj) => {
+  return new Promise(resolve => {
+    let totalDoses = obj.total_doses.replace(/\s|,/g, "")
+    let totalVaccinations = obj.total_vaccinations.replace(/\s|,/g, "")
+    let dosesLeft = parseInt(totalDoses) - parseInt(totalVaccinations)
+    obj.vaccines_left = dosesLeft.toLocaleString()
+    resolve(obj)
+  })
+}
+
 const scrapePDF2JSON = async (res, regexArr) => {
   let text = await replaceChars(res)
   let matched = await matchAll(text, regexArr)
   let array = await formatThaiDate(matched)
   let formattedJSON = await cleanArray(array)
-  return formattedJSON
+  let calcJSON = await calcVaccinesLeft(formattedJSON)
+  return calcJSON
 }
 
 module.exports = {
