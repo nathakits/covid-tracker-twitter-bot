@@ -31,7 +31,7 @@ $ npm install
 # scrape vaccine data as JSON file
 $ npm run scrape
 
-# post tweet
+# calculate percentage and post tweet
 $ npm run build
 
 # post test tweet
