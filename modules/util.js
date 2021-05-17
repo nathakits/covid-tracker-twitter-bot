@@ -63,7 +63,13 @@ const calcPercentageCSV = (array, population) => {
 const calcPercentageJSON = (obj, population) => {
   let vaccinated = obj.people_fully_vaccinated.replace(/\s|,/g, '')
   let percentage = `${((vaccinated / population) * 100).toFixed(2)}`
-  return percentage
+  let parseNum = parseFloat(percentage)
+  if (!isNaN(parseNum) && parseNum !== undefined) {
+    return parseNum
+  } else {
+    console.log(`Error calculating percentage`);
+    process.exit(1)
+  }
 }
 
 const drawFullBars = (barStyle, num) => {
