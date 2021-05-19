@@ -4,7 +4,9 @@ const { tweetThread } = require('./modules/tweet');
 const data = require('./data/vaccinations.json')
 
 // global vars
-let thailandPopulation = 69.799 * 1000000
+// population data from OWID
+// https://github.com/owid/covid-19-data/blob/master/scripts/input/un/population_2020.csv
+let thailandPopulation = 69799978
 let barEmpty = '░'
 let barFull = '▒'
 let progressBarLength = 20
