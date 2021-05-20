@@ -8,7 +8,7 @@ const data = require('./data/vaccinations.json')
 // https://github.com/owid/covid-19-data/blob/master/scripts/input/un/population_2020.csv
 let thailandPopulation = 69799978
 let barEmpty = '░'
-let barFull = '▒'
+let barFull = '▓'
 let progressBarLength = 20
 let progressPercent = ''
 let thread = [];
