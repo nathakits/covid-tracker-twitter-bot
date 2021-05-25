@@ -65,7 +65,7 @@ const calcPercentageJSON = (obj, population) => {
   let percentage = `${((vaccinated / population) * 100).toFixed(2)}`
   let parseNum = parseFloat(percentage)
   if (!isNaN(parseNum) && parseNum !== undefined) {
-    return parseNum
+    return percentage
   } else {
     console.log(`Error calculating percentage`);
     process.exit(1)
