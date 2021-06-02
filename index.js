@@ -20,6 +20,7 @@ const calcProgressBar = () => {
   progressPercent = `${progressbar} ${percentage}%`
   thread.push(progressPercent)
   console.log(thread);
+  // tweet
   tweetThread(thread)
     .then(() => {
       console.log(`Successfully tweeted`);
