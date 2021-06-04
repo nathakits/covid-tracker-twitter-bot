@@ -27,6 +27,8 @@
   "homepage": "https://github.com/nathakits/covid-tracker-twitter-bot#readme",
   "dependencies": {
     "axios": "^0.21.1",
+    "chart.js": "^3.3.2",
+    "chartjs-node-canvas": "^3.2.0",
     "crawler-request": "^1.2.2",
     "csv": "^5.5.0",
     "jsdom": "^16.5.3",
