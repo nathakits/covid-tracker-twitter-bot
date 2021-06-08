@@ -10,15 +10,28 @@ let thailandPopulation = 69799978
 let barEmpty = '░'
 let barFull = '▓'
 let progressBarLength = 20
-let progressPercent = ''
 let thread = [];
 
 // read scraped vaccine json and tweet
 const calcProgressBar = () => {
-  let percentage = util.calcPercentageJSON(data, thailandPopulation)
-  let progressbar = util.drawProgressBar(percentage, progressBarLength, barEmpty, barFull)
-  progressPercent = `${progressbar} ${percentage}%`
-  thread.push(progressPercent)
+  // yesterday
+  let percentage_ytd_1Dose = util.calcYesterdayPercentage(data.people_vaccinated, data.first_dose_plus, thailandPopulation)
+  let percentage_ytd_2Dose = util.calcYesterdayPercentage(data.people_fully_vaccinated, data.second_dose_plus, thailandPopulation)
+  // today
+  let percentage1Dose = util.calcPercentageJSON(data.people_vaccinated, thailandPopulation)
+  let percentage2Dose = util.calcPercentageJSON(data.people_fully_vaccinated, thailandPopulation)
+  let progressbar1Dose = util.drawProgressBar(percentage2Dose, progressBarLength, barEmpty, barFull)
+  let progressbar2Dose = util.drawProgressBar(percentage2Dose, progressBarLength, barEmpty, barFull)
+  // tweet sections
+  let progressBar1 = `1st dose: ${percentage1Dose}% (+${(percentage1Dose - percentage_ytd_1Dose).toFixed(2)}%)\n${progressbar1Dose}`
+  let progressBar2 = `\n\n2nd dose: ${percentage2Dose}% (+${(percentage2Dose - percentage_ytd_2Dose).toFixed(2)}%)\n${progressbar2Dose}`
+  let progressNum1Dose = `\n\n1st dose: ${data.people_vaccinated} (+${data.first_dose_plus})`
+  let progressNum2Dose = `\n2nd dose: ${data.people_fully_vaccinated} (+${data.second_dose_plus})`
+  let progressNumTotal = `\nTotal: ${data.total_vaccinations} (+${data.total_dose_plus})`
+  // combine all sections
+  let progress = progressBar1 + progressBar2 + progressNum1Dose + progressNum2Dose + progressNumTotal
+  // add to array
+  thread.push(progress)
   console.log(thread);
   // tweet
   tweetThread(thread)
