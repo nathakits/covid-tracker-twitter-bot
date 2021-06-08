@@ -60,9 +60,22 @@ const calcPercentageCSV = (array, population) => {
   return percentage
 }
 
-const calcPercentageJSON = (obj, population) => {
-  let vaccinated = obj.people_fully_vaccinated.replace(/\s|,/g, '')
+const calcPercentageJSON = (num, population) => {
+  let vaccinated = num.replace(/\s|,/g, '')
   let percentage = `${((vaccinated / population) * 100).toFixed(2)}`
+  let parseNum = parseFloat(percentage)
+  if (!isNaN(parseNum) && parseNum !== undefined) {
+    return percentage
+  } else {
+    console.log(`Error calculating percentage`);
+    process.exit(1)
+  }
+}
+
+const calcYesterdayPercentage = (num, plus, population) => {
+  let vaccinated = num.replace(/\s|,/g, '')
+  let vaccinated_plus = plus.replace(/\s|,/g, '')
+  let percentage = `${(( (vaccinated - vaccinated_plus) / population) * 100).toFixed(2)}`
   let parseNum = parseFloat(percentage)
   if (!isNaN(parseNum) && parseNum !== undefined) {
     return percentage
@@ -106,9 +119,11 @@ const replaceChars = (res) => {
     let seventhPass = sixthPass.replace(/\n/g, '')
     let eighthPass = seventhPass.replace(/ได/g, 'ได้')
     let ninthPass = eighthPass.replace(/จ านวน/g, 'จำนวน')
-    // let stringify = JSON.stringify(ninthPass, null, 2)
+    let tenthPass = ninthPass.replace(/ตําม/g, 'ตาม')
+    let eleventhPass = tenthPass.replace(/มิถุนํายน/g, 'มิถุนายน')
+    // let stringify = JSON.stringify(eleventhPass, null, 2)
     // fs.writeFileSync(`./data/pdf_res.json`, stringify)
-    resolve(ninthPass)
+    resolve(eleventhPass)
   })
 }
 
@@ -208,4 +223,5 @@ module.exports = {
   calcPercentageJSON,
   drawProgressBar,
   scrapePDF2JSON,
+  calcYesterdayPercentage
 }
