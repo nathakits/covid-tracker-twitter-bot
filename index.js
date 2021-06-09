@@ -20,7 +20,7 @@ const calcProgressBar = () => {
   // today
   let percentage1Dose = util.calcPercentageJSON(data.people_vaccinated, thailandPopulation)
   let percentage2Dose = util.calcPercentageJSON(data.people_fully_vaccinated, thailandPopulation)
-  let progressbar1Dose = util.drawProgressBar(percentage2Dose, progressBarLength, barEmpty, barFull)
+  let progressbar1Dose = util.drawProgressBar(percentage1Dose, progressBarLength, barEmpty, barFull)
   let progressbar2Dose = util.drawProgressBar(percentage2Dose, progressBarLength, barEmpty, barFull)
   // tweet sections
   let progressBar1 = `1st dose: ${percentage1Dose}% (+${(percentage1Dose - percentage_ytd_1Dose).toFixed(2)}%)\n${progressbar1Dose}`
