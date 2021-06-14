@@ -22,9 +22,12 @@ const calcProgressBar = () => {
   let percentage2Dose = util.calcPercentageJSON(data.people_fully_vaccinated, thailandPopulation)
   let progressbar1Dose = util.drawProgressBar(percentage1Dose, progressBarLength, barEmpty, barFull)
   let progressbar2Dose = util.drawProgressBar(percentage2Dose, progressBarLength, barEmpty, barFull)
+  // diff
+  let percentage1DosePlus = (percentage1Dose - percentage_ytd_1Dose).toFixed(2)
+  let percentage2DosePlus = (percentage2Dose - percentage_ytd_2Dose).toFixed(2)
   // tweet sections
-  let progressBar1 = `1st dose: ${percentage1Dose}% (+${(percentage1Dose - percentage_ytd_1Dose).toFixed(2)}%)\n${progressbar1Dose}`
-  let progressBar2 = `\n\n2nd dose: ${percentage2Dose}% (+${(percentage2Dose - percentage_ytd_2Dose).toFixed(2)}%)\n${progressbar2Dose}`
+  let progressBar1 = `1st dose: ${percentage1Dose}% (+${percentage1DosePlus}%)\n${progressbar1Dose}`
+  let progressBar2 = `\n\n2nd dose: ${percentage2Dose}% (+${percentage2DosePlus}%)\n${progressbar2Dose}`
   let progressNum1Dose = `\n\n1st dose: ${data.people_vaccinated} (+${data.first_dose_plus})`
   let progressNum2Dose = `\n2nd dose: ${data.people_fully_vaccinated} (+${data.second_dose_plus})`
   let progressNumTotal = `\nTotal: ${data.total_vaccinations} (+${data.total_dose_plus})`
