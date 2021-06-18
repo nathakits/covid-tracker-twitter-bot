@@ -212,8 +212,8 @@ const scrapePDF2JSON = async (res, regexArr) => {
   let matched = await matchAll(text, regexArr)
   let array = await formatThaiDate(matched)
   let formattedJSON = await cleanArray(array)
-  let calcJSON = await calcVaccinesLeft(formattedJSON)
-  return calcJSON
+  // let calcJSON = await calcVaccinesLeft(formattedJSON)
+  return formattedJSON
 }
 
 module.exports = {
