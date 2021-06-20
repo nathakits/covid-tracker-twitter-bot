@@ -1,5 +1,5 @@
 {
-  "last_updated": "18-06-2021 11:28:17AM",
+  "last_updated": "20-06-2021 11:28:17AM",
   "country": "Thailand",
   "vaccines": [
     "Oxford/AstraZeneca",
@@ -7,7 +7,7 @@
   ],
   "sinovac": "5,282,154",
   "astrazeneca": "2,006,780",
-  "date": "17-06-2021",
+  "date": "19-06-2021",
   "total_vaccinations": "7,219,668",
   "people_vaccinated": "5,252,531",
   "people_fully_vaccinated": "1,967,137",
