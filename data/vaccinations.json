@@ -8,11 +8,11 @@
   "sinovac": "5,282,154",
   "astrazeneca": "2,006,780",
   "date": "19-06-2021",
-  "total_vaccinations": "7,219,668",
-  "people_vaccinated": "5,252,531",
-  "people_fully_vaccinated": "1,967,137",
-  "total_dose_plus": "215,885",
-  "first_dose_plus": "137,776",
-  "second_dose_plus": "78,109",
+  "total_vaccinations": "7,587,178",
+  "people_vaccinated": "5,486,092",
+  "people_fully_vaccinated": "2,101,086",
+  "total_dose_plus": "104,095",
+  "first_dose_plus": "51,973",
+  "second_dose_plus": "52,122",
   "source_url": "https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-18.pdf"
 }
