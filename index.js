@@ -31,8 +31,9 @@ const calcProgressBar = () => {
   let progressNum1Dose = `\n\n1st dose: ${data.people_vaccinated} (+${data.first_dose_plus})`
   let progressNum2Dose = `\n2nd dose: ${data.people_fully_vaccinated} (+${data.second_dose_plus})`
   let progressNumTotal = `\nTotal: ${data.total_vaccinations} (+${data.total_dose_plus})`
+  let dateOfData = `\n\n(As of ${data.date})`
   // combine all sections
-  let progress = progressBar1 + progressBar2 + progressNum1Dose + progressNum2Dose + progressNumTotal
+  let progress = progressBar1 + progressBar2 + progressNum1Dose + progressNum2Dose + progressNumTotal + dateOfData
   // add to array
   thread.push(progress)
   console.log(thread);
