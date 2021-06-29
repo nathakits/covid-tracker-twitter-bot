@@ -132,7 +132,7 @@ const matchAll = (text, array) => {
     let arr = [{
       last_updated: currentDateTime,
       country: `Thailand`,
-      vaccines: [`Oxford/AstraZeneca`, `Sinovac`]
+      vaccines: [`Oxford/AstraZeneca`, `Sinovac`, `Sinopharm`]
     }]
     let matched = []
     array.forEach(regex => {
