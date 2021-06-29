@@ -1,9 +1,10 @@
 {
-  "last_updated": "29-06-2021 12:27:21PM",
+  "last_updated": "29-06-2021 21:5:37PM",
   "country": "Thailand",
   "vaccines": [
     "Oxford/AstraZeneca",
-    "Sinovac"
+    "Sinovac",
+    "Sinopharm"
   ],
   "sinovac": "5,628,643",
   "astrazeneca": "2,376,710",
