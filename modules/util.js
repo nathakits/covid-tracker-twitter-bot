@@ -169,23 +169,25 @@ const formatThaiDate = (array) => {
       "ธันวาคม": "12",
     }
     let raw_date = array[0].date
-    let arr = raw_date.split(' ')
-    let date = parseInt(arr[0])
-    let month = parseInt(arr[1])
-    let year = parseInt(arr[2]) - 543
-    // match and update the month to number
-    for (const [key, value] of Object.entries(thai_month)) {
-      let regex = new RegExp(key, 'g')
-      let formatmonth = raw_date.match(regex)
-      if (formatmonth) {
-        month = value
-        break;
+    if (raw_date) {
+      let arr = raw_date.split(' ')
+      let date = parseInt(arr[0])
+      let month = parseInt(arr[1])
+      let year = parseInt(arr[2]) - 543
+      // match and update the month to number
+      for (const [key, value] of Object.entries(thai_month)) {
+        let regex = new RegExp(key, 'g')
+        let formatmonth = raw_date.match(regex)
+        if (formatmonth) {
+          month = value
+          break;
+        }
       }
+      // create a new obj
+      let fullDate = `${formatDate(date)}-${month}-${year}`
+      // replace date obj with new formatted date obj
+      array[0].date = fullDate
     }
-    // create a new obj
-    let fullDate = `${formatDate(date)}-${month}-${year}`
-    // replace date obj with new formatted date obj
-    array[0].date = fullDate
     resolve(array)
   })
 }
@@ -197,6 +199,18 @@ const cleanArray = (array) => {
   })
 }
 
+const sinovacArray = (obj) => {
+  return new Promise(resolve => {
+    obj.sinovac = []
+    obj.sinovac.push({todayPlus: obj.sinoToday}, {totalDoses: obj.sinoTotal})
+    delete obj.sinoToday
+    delete obj.sinoTotal
+    resolve(obj)
+  })
+}
+
+// TODO: update this
+// alotted vaccines
 const calcVaccinesLeft = (obj) => {
   return new Promise(resolve => {
     let totalDoses = obj.total_doses.replace(/\s|,/g, "")
