@@ -4,7 +4,7 @@
   "description": "Covid vaccine tracker Twitter bot",
   "main": "index.js",
   "scripts": {
-    "scrape": "node --trace-warnings ./scraper/thailand.js",
+    "scrape": "node --trace-warnings ./scraper/th-v2.js",
     "build": "node --trace-warnings index.js",
     "test": "node --trace-warnings test.js"
   },
@@ -29,6 +29,7 @@
     "axios": "^0.21.1",
     "chart.js": "^3.3.2",
     "chartjs-node-canvas": "^3.2.0",
+    "chartjs-plugin-datalabels": "^2.0.0",
     "crawler-request": "^1.2.2",
     "csv": "^5.5.0",
     "jsdom": "^16.5.3",
