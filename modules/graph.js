@@ -95,7 +95,7 @@ const graph = async () => {
     ],
   };
   const image = await chartJSNodeCanvas.renderToBuffer(configuration)
-  fs.writeFile('image.png', image, (err) => {
+  fs.writeFile('data/vaccine_graph.png', image, (err) => {
     if (err) throw err
     console.log(`done`);
   });
