@@ -21,7 +21,7 @@ data = new Array(dailyJSON).map(data => {
     "location": data.country,
     "date": data.date,
     "vaccines": `"${formatVaccines(dailyJSON)}"`,
-    "source_url": data.source_url,
+    "source_url": `"${data.source_url}"`,
     "total_vaccinations": data.total_vaccinations.replace(/,/g, ""),
     "people_vaccinated": data.people_vaccinated.replace(/,/g, ""),
     "people_fully_vaccinated": data.people_fully_vaccinated.replace(/,/g, "")
