@@ -1,5 +1,5 @@
 {
-  "last_updated": "04-07-2021 11:22:1AM",
+  "last_updated": "04-07-2021 23:7:30PM",
   "country": "Thailand",
   "vaccines": [
     "Oxford/AstraZeneca",
@@ -13,7 +13,5 @@
   "total_dose_plus": "98,605",
   "first_dose_plus": "81,032",
   "second_dose_plus": "17,573",
-  "sinoToday": "2,729",
-  "sinoTotal": "3,625,835",
-  "source_url": "https://ddc.moph.go.th/uploads/ckeditor2//files/Slide%202021-07-04.pdf"
+  "source_url": "https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-04.pdf"
 }
