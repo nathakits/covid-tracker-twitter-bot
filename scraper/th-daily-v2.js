@@ -14,8 +14,7 @@ let regexArray = [
   /สะสม\s*(?<people_fully_vaccinated>.{1,11})\s*จำนวน/,
   /วันที่\s*28\s*กุมภาพันธ์\s*2564\s*เพิ่มขึ้น\s*\+\s*(?<total_dose_plus>.{1,20})\s*โดส/,
   /1\s*รายใหม่\s*\W\s*(?<first_dose_plus>.{1,20})\s*ราย/,
-  /2\s*รายใหม่\s*\W\s*(?<second_dose_plus>.{1,20})\s*ราย/,
-  /มSinovac(?<sinoToday>\d*,.{1,3})\d*,.{1,3}(?<sinoTotal>\d*,.{1,3},.{1,3})/,
+  /2\s*รายใหม่\s*\W\s*(?<second_dose_plus>.{1,20})\s*ราย/
 ]
 
 const crawl = async () => {
