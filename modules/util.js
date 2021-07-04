@@ -1,5 +1,4 @@
 const fs = require('fs');
-// parsing csv file to json obj
 const { currentDateTime, formatDate } = require('./time')
 
 let delta = 5
