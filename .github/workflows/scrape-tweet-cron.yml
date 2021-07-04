@@ -16,23 +16,30 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    # scrape data from MOPH
-    - name: Scrape data - Node.js ${{ matrix.node-version }}
+    - name: Scrape and Tweet - Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: npm run scrape
+    # scrape data from MOPH
+    - name: Scrape data
+      run: npm run scrape
+    # incremental update to csv
+    - name: Update CSV
+      run: npm run tocsv
+    # tweet and update banner
+    - name: Tweet and update banner
+      run: npm run build
+      env:
+       CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+       CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+       ACCESS_TOKEN_KEY: ${{ secrets.ACCESS_TOKEN_KEY }}
+       ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+    # commit and push to repo
     - name: Commit and Push JSON
       run: |
         git config user.name "nathakits"
         git config user.email nathakit.tan@gmail.com
         git add .
-        git commit -m "auto update vaccine json"
+        git commit -m "[bot] auto update vaccine data"
         git push
-    - run: npm run build
-      env: 
-       CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
-       CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
-       ACCESS_TOKEN_KEY: ${{ secrets.ACCESS_TOKEN_KEY }}
-       ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
