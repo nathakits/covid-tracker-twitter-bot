@@ -4,8 +4,8 @@
   "description": "Covid vaccine tracker Twitter bot",
   "main": "index.js",
   "scripts": {
-    "scrape": "node --trace-warnings ./scraper/th-v2.js",
-    "graph": "node --trace-warnings ./modules/graph.js",
+    "scrape": "node --trace-warnings ./scraper/th-daily-v2.js",
+    "graph": "node --trace-warnings ./modules/banner-graph.js",
     "build": "node --trace-warnings index.js",
     "test": "node --trace-warnings test.js"
   },

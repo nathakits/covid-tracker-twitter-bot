@@ -7,6 +7,61 @@ const width = 1500; //px
 const height = 500; //px
 const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height })
 
+const data = {
+  "2021-05-16": {
+    first: 30000,
+    second: 1202,
+  },
+  "2021-05-17": {
+    first: 12000,
+    second: 1832,
+  },
+  "2021-05-18": {
+    first: 23000,
+    second: 2000,
+  },
+  "2021-05-19": {
+    first: 27300,
+    second: 2104,
+  },
+  "2021-05-20": {
+    first: 28500,
+    second: 2200,
+  },
+  "2021-05-21": {
+    first: 30000,
+    second: 2200,
+  },
+  "2021-05-22": {
+    first: 42000,
+    second: 3100,
+  },
+  "2021-05-23": {
+    first: 51000,
+    second: 3800,
+  },
+  "2021-05-24": {
+    first: 63000,
+    second: 5200,
+  },
+  "2021-05-25": {
+    first: 72000,
+    second: 6000,
+  },
+  "2021-05-26": {
+    first: 86000,
+    second: 7400,
+  },
+};
+
+const results = {
+  first: new Array(12).fill(NaN),
+  second: new Array(12).fill(NaN),
+  labels: new Array(12).fill(""),
+};
+
+console.log(results);
+
 // generate vaccination graph
 const graph = async () => {
   const configuration = {
