@@ -6,11 +6,8 @@ const axios = require('axios')
 const { JSDOM } = require('jsdom')
 
 // vars
-let weburl = `https://ddc.moph.go.th/dcd/pagecontent.php?page=708&dept=dcd`
+let weburl = `https://ddc.moph.go.th/dcd/pagecontent.php?page=723&dept=dcd`
 let regexArray = [
-  /Sinovac\s*\W*นวนวัคซีนทั้งหมดที่ได้จัดสรร\s*.\W*นวน\s*(?<sinovac>.{1,40})\s*โดส/,
-  /AstraZeneca\s*\W*นวนวัคซีนทั้งหมดที่ได้จัดสรร\s*\W*นวน\s*(?<astrazeneca>.{1,40})\s*โดส/,
-  // /ารจัดสรรวัคซีนทั้งหมด\s*.{3}นวน\s*(?<total_doses>.{1,40})\s*โดส/,
   /\วันที่\s*(?<date>.{1,30})\s*เวลา\s*18.00\s*น.\s*\)/,
   /2564\s*ทั้งหมด\s*(?<total_vaccinations>.{1,40})\s*โดส/,
   /เทศ\W*วัคซีนเข็มที่ 1 .{1,3}นวน (?<people_vaccinated>.{1,40})\s*ราย/,
