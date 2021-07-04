@@ -4,32 +4,65 @@ const { ChartJSNodeCanvas } = require('chartjs-node-canvas');
 const ChartDataLabels = require('chartjs-plugin-datalabels');
 const csv = require('csvtojson')
 
+const Twitter = require('twitter-lite');
+const client = new Twitter({
+  consumer_key: process.env.CONSUMER_KEY,
+  consumer_secret: process.env.CONSUMER_SECRET,
+  access_token_key: process.env.ACCESS_TOKEN_KEY,
+  access_token_secret: process.env.ACCESS_TOKEN_SECRET
+});
+
 // vars
 const width = 1500; //px
 const height = 500; //px
 const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height })
 const filePath = path.join(__dirname, '../data/Thailand.csv');
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+const titleText = `Thailand's Daily COVID-19 Vaccination Rate`
+
+// color
+const firstDoseColor = "#00675b"
+const secondDoseColor = "#52c7b8"
+const averageColor = "#303f9f"
+const targetColor = "#ff6f00"
+const textColor = "#111827"
+
+// radius
+const barRadius = 4
 
 // generate vaccination graph
 const graph = async () => {
   console.log(`Status: Creating graph...`);
   const data = await csv().fromFile(filePath)
-  const sliced = data.slice(Math.max(data.length - 12, 0))
+  const sliced = data.slice(Math.max(data.length - 14, 0))
   const firstDosePlusArr = sliced.map(el => el.first_dose_plus)
   const secondtDosePlusArr = sliced.map(el => el.second_dose_plus)
+  const totalDosePlusArr = sliced.map(el => Number(el.total_dose_plus))
   const labelArr = sliced.map(el => el.date)
+  // average
+  const calcAverage = (totalDosePlusArr.reduce(reducer) / 14)
+  const avgArr = new Array(14).fill(calcAverage)
+  // target
+  const today = new Date()
+  const new_year=new Date(today.getFullYear(), 11, 31)
+  const one_day= (1000 * 60 * 60 * 24)
+  const days_left = Math.ceil((new_year.getTime() - today.getTime()) / (one_day))
+  const targetDoses = (100 * 1000000)
+  const targetAvgDose = Math.ceil(targetDoses / days_left)
+  const targetArr = new Array(14).fill(targetAvgDose)
 
   const configuration = {
-    type: "bar",
     data: {
       labels: labelArr,
       datasets: [
         {
+          type: "bar",
           label: "1st Dose     ",
           data: firstDosePlusArr,
           fill: false,
-          backgroundColor: "#53b544",
-          borderColor: "#53b544",
+          backgroundColor: firstDoseColor,
+          borderColor: firstDoseColor,
+          borderRadius: barRadius,
           tension: 0.4,
           datalabels: {
             align: "start",
@@ -37,44 +70,73 @@ const graph = async () => {
           },
         },
         {
-          label: "2nd Dose",
+          type: "bar",
+          label: "2nd Dose     ",
           data: secondtDosePlusArr,
           fill: false,
-          backgroundColor: "#2e2366",
-          borderColor: "#2e2366",
+          backgroundColor: secondDoseColor,
+          borderColor: secondDoseColor,
+          borderRadius: barRadius,
           tension: 0.4,
           datalabels: {
+            color: "#111827",
             align: "start",
             anchor: "end",
           },
-        }
+        },
+        {
+          type: "line",
+          label: "14-day Average",
+          data: avgArr,
+          fill: false,
+          borderDash: [8, 8],
+          radius: 0,
+          backgroundColor: averageColor,
+          borderColor: averageColor,
+          borderRadius: barRadius,
+          datalabels: {
+            display: false
+          },
+        },
+        // {
+        //   type: "line",
+        //   label: "Target",
+        //   data: targetArr,
+        //   fill: false,
+        //   borderDash: [8, 8],
+        //   radius: 0,
+        //   backgroundColor: targetColor,
+        //   borderColor: targetColor,
+        //   borderRadius: barRadius,
+        //   datalabels: {
+        //     display: false
+        //   },
+        // },
       ],
     },
     options: {
       layout: {
-        padding: 4,
+        padding: 8,
       },
       scales: {
-        x: {
+        xAxes: {
           stacked: true,
           grid: {
             display: false
           },
           ticks: {
-            color: "#000",
-            fonts: {
-              size: 20,
-              weight: "bold"
+            color: textColor,
+            font: {
+              size: 14,
             }
           },
         },
-        y: {
+        yAxes: {
           stacked: true,
           ticks: {
-            color: "#000",
-            fonts: {
-              size: 20,
-              weight: "bold"
+            color: textColor,
+            font: {
+              size: 14,
             }
           },
         }
@@ -82,10 +144,23 @@ const graph = async () => {
       plugins: {
         title: {
           display: true,
-          text: `Thailand's Daily COVID Vaccination Rate`,
-          fontColor: "#2e2366",
+          text: titleText,
+          color: textColor,
           font: { size: 28 },
           padding: 4
+        },
+        legend: {
+          labels: {
+            usePointStyle: true,
+            fill: false,
+            boxWidth: 20,
+            boxHeight: 20,
+            color: textColor,
+            padding: 12,
+            font: {
+              size: 16
+            }
+          },
         },
         datalabels: {
           // backgroundColor: function(context) {
@@ -113,19 +188,40 @@ const graph = async () => {
           ctx.fillStyle = "#fff";
           ctx.fillRect(0, 0, width, height);
         },
-        beforeInit: (chart) => {
-          chart.legend.afterFit = function() {
-            this.height = this.height + 35;
-          };
-        },
+        beforeInit(chart) {
+          // Get reference to the original fit function
+          const originalFit = chart.legend.fit;
+          // Override the fit function
+          chart.legend.fit = function fit() {
+            // Call original function and bind scope in order to use `this` correctly inside it
+            originalFit.bind(chart.legend)();
+            // Change the height as suggested in another answers
+            this.height += 12;
+          }
+        }
       }
     ],
   };
-  const image = await chartJSNodeCanvas.renderToBuffer(configuration)
-  fs.writeFile('data/vaccine_graph.png', image, (err) => {
+
+  const imgBuffer = await chartJSNodeCanvas.renderToBuffer(configuration)
+  const imgURL = await chartJSNodeCanvas.renderToDataURL(configuration);
+
+  console.log(`Status: Complete`);
+
+  fs.writeFile('data/vaccine_graph.png', imgBuffer, (err) => {
     if (err) throw err
-    console.log(`Status: Complete`);
+    console.log(`Status: Image saved`);
+  });
+
+  await client.post("account/update_profile_banner", {
+    banner: imgURL.split(",")[1],
+    width: width,
+    height: height,
+    offset_left: 0,
+    offset_top: 0,
   });
 }
 
-graph()
+module.exports = {
+  graph
+}
