@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "scrape": "node --trace-warnings ./scraper/th-daily-v2.js",
+    "tocsv": "node --trace-warnings ./modules/json2csv.js",
     "graph": "node --trace-warnings ./modules/banner-graph.js",
     "build": "node --trace-warnings index.js",
     "test": "node --trace-warnings test.js"
@@ -32,8 +33,8 @@
     "chartjs-node-canvas": "^3.2.0",
     "chartjs-plugin-datalabels": "^2.0.0",
     "crawler-request": "^1.2.2",
-    "csv": "^5.5.0",
     "jsdom": "^16.5.3",
+    "json2csv": "^5.0.6",
     "puppeteer": "^10.0.0",
     "twitter-lite": "^1.1.0"
   },
