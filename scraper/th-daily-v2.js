@@ -1,8 +1,5 @@
 const fs = require('fs');
 const crawler = require('crawler-request');
-const pdf = require('pdf-parse');
-const csv = require('csv');
-const parser = csv.parse();
 const time = require('../modules/time')
 const { scrapePDF2JSON } = require('../modules/util')
 const axios = require('axios')
@@ -38,19 +35,9 @@ const crawl = async () => {
             console.log(`Scrape complete`);
             data.source_url = url
             let stringified = JSON.stringify(data, null, 2)
-            // console.log(stringified);
+            console.log(stringified);
             // write to json file
             fs.writeFileSync(`./data/vaccinations.json`, stringified)
-            // console.log(`Appending data to CSV...`);
-            // read and append new row
-            // fs.readFile('./data/Thailand.csv', (err, fileData) => {
-            //   if (fileData) {
-            //     let records = parser(fileData, {
-            //       columns: true
-            //     });
-            //     console.log(records);
-            //   }
-            // })
           }).catch(err => {
             if (res.status === 404) {
               console.log(res);

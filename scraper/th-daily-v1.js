@@ -1,7 +1,5 @@
 const fs = require('fs');
 const crawler = require('crawler-request');
-const csv = require('csv');
-const parser = csv.parse();
 const time = require('../modules/time')
 const { scrapePDF2JSON } = require('../modules/util')
 const axios = require('axios')
@@ -42,15 +40,6 @@ const crawl = async () => {
             // write to json file
             fs.writeFileSync(`./data/vaccinations.json`, stringified)
             console.log(`Scrape complete`);
-            // update csv file TODO
-            // fs.readFile('./data/Thailand.csv', (err, fileData) => {
-            //   if (fileData) {
-            //     let records = parser(fileData, {
-            //       columns: true
-            //     });
-            //     console.log(records);
-            //   }
-            // })
           }).catch(err => {
             if (res.status === 404) {
               console.log(res);
