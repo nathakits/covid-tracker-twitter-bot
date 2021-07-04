@@ -1,77 +1,32 @@
 const fs = require('fs');
+const path = require('path')
 const { ChartJSNodeCanvas } = require('chartjs-node-canvas');
 const ChartDataLabels = require('chartjs-plugin-datalabels');
+const csv = require('csvtojson')
 
 // vars
 const width = 1500; //px
 const height = 500; //px
 const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height })
-
-const data = {
-  "2021-05-16": {
-    first: 30000,
-    second: 1202,
-  },
-  "2021-05-17": {
-    first: 12000,
-    second: 1832,
-  },
-  "2021-05-18": {
-    first: 23000,
-    second: 2000,
-  },
-  "2021-05-19": {
-    first: 27300,
-    second: 2104,
-  },
-  "2021-05-20": {
-    first: 28500,
-    second: 2200,
-  },
-  "2021-05-21": {
-    first: 30000,
-    second: 2200,
-  },
-  "2021-05-22": {
-    first: 42000,
-    second: 3100,
-  },
-  "2021-05-23": {
-    first: 51000,
-    second: 3800,
-  },
-  "2021-05-24": {
-    first: 63000,
-    second: 5200,
-  },
-  "2021-05-25": {
-    first: 72000,
-    second: 6000,
-  },
-  "2021-05-26": {
-    first: 86000,
-    second: 7400,
-  },
-};
-
-const results = {
-  first: new Array(12).fill(NaN),
-  second: new Array(12).fill(NaN),
-  labels: new Array(12).fill(""),
-};
-
-console.log(results);
+const filePath = path.join(__dirname, '../data/Thailand.csv');
 
 // generate vaccination graph
 const graph = async () => {
+  console.log(`Status: Creating graph...`);
+  const data = await csv().fromFile(filePath)
+  const sliced = data.slice(Math.max(data.length - 12, 0))
+  const firstDosePlusArr = sliced.map(el => el.first_dose_plus)
+  const secondtDosePlusArr = sliced.map(el => el.second_dose_plus)
+  const labelArr = sliced.map(el => el.date)
+
   const configuration = {
     type: "bar",
     data: {
-      labels: ['2021-05-15', '2021-05-16', '2021-05-17', '2021-05-18', '2021-05-19'],
+      labels: labelArr,
       datasets: [
         {
           label: "1st Dose     ",
-          data: ['8000', '10000','21000','42000','90600'],
+          data: firstDosePlusArr,
           fill: false,
           backgroundColor: "#53b544",
           borderColor: "#53b544",
@@ -83,7 +38,7 @@ const graph = async () => {
         },
         {
           label: "2nd Dose",
-          data: ['10000', '15000','25000','35000','45000'],
+          data: secondtDosePlusArr,
           fill: false,
           backgroundColor: "#2e2366",
           borderColor: "#2e2366",
@@ -101,10 +56,27 @@ const graph = async () => {
       },
       scales: {
         x: {
-          stacked: true
+          stacked: true,
+          grid: {
+            display: false
+          },
+          ticks: {
+            color: "#000",
+            fonts: {
+              size: 20,
+              weight: "bold"
+            }
+          },
         },
         y: {
-          stacked: true
+          stacked: true,
+          ticks: {
+            color: "#000",
+            fonts: {
+              size: 20,
+              weight: "bold"
+            }
+          },
         }
       },
       plugins: {
@@ -112,7 +84,7 @@ const graph = async () => {
           display: true,
           text: `Thailand's Daily COVID Vaccination Rate`,
           fontColor: "#2e2366",
-          font: { size: 32 },
+          font: { size: 28 },
           padding: 4
         },
         datalabels: {
@@ -122,7 +94,7 @@ const graph = async () => {
           borderRadius: 4,
           color: "white",
           font: {
-            size: 16,
+            size: 12,
             weight: "bold",
           },
           formatter: (value) => {
@@ -152,7 +124,7 @@ const graph = async () => {
   const image = await chartJSNodeCanvas.renderToBuffer(configuration)
   fs.writeFile('data/vaccine_graph.png', image, (err) => {
     if (err) throw err
-    console.log(`done`);
+    console.log(`Status: Complete`);
   });
 }
 
