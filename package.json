@@ -6,7 +6,6 @@
   "scripts": {
     "scrape": "node --trace-warnings ./scraper/th-daily-v1.js",
     "tocsv": "node --trace-warnings ./modules/json2csv.js",
-    "graph": "node --trace-warnings ./modules/banner-graph.js",
     "build": "node --trace-warnings index.js",
     "test": "node --trace-warnings test.js"
   },
