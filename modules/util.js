@@ -120,9 +120,10 @@ const replaceChars = (res) => {
     let ninthPass = eighthPass.replace(/จ านวน/g, 'จำนวน')
     let tenthPass = ninthPass.replace(/ตําม/g, 'ตาม')
     let eleventhPass = tenthPass.replace(/มิถุนํายน/g, 'มิถุนายน')
-    // let stringify = JSON.stringify(eleventhPass, null, 2)
+    let twelfthPass = eleventhPass.replace(/กรกฎําคม/g, 'กรกฎาคม')
+    // let stringify = JSON.stringify(twelfthPass, null, 2)
     // fs.writeFileSync(`./data/pdf_res.json`, stringify)
-    resolve(eleventhPass)
+    resolve(twelfthPass)
   })
 }
 
