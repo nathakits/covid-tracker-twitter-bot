@@ -41,7 +41,8 @@ const graph = async () => {
   const labelArr = sliced.map(el => el.date)
   // average
   const calcAverage = (totalDosePlusArr.reduce(reducer) / 14)
-  const avgArr = new Array(14).fill(calcAverage)
+  const formatAvg = Math.round(calcAverage).toLocaleString()
+  const avgArr = new Array(14).fill(Math.round(calcAverage))
   // target
   const today = new Date()
   const new_year=new Date(today.getFullYear(), 11, 31)
@@ -86,7 +87,7 @@ const graph = async () => {
         },
         {
           type: "line",
-          label: "14-day Average",
+          label: `14-day Average: ${formatAvg} doses`,
           data: avgArr,
           fill: false,
           borderDash: [8, 8],
