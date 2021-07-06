@@ -27,6 +27,9 @@ jobs:
     # incremental update to csv
     - name: Update CSV
       run: npm run tocsv
+    # write full JSON
+    - name: Update JSON
+      run: npm run tojson
     # tweet and update banner
     - name: Tweet and update banner
       run: npm run build
