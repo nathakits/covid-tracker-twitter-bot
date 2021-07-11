@@ -178,11 +178,15 @@ const formatThaiDate = (array) => {
       for (const [key, value] of Object.entries(thai_month)) {
         let regex = new RegExp(key, 'g')
         let formatmonth = raw_date.match(regex)
-        if (formatmonth) {
+        if (formatmonth !== NaN) {
           month = value
           break;
+        } else {
+          console.log(`Error: formatting month ${formatmonth}`);
+          process.exit(1)
         }
       }
+      
       // create a new obj
       let fullDate = `${formatDate(date)}-${month}-${year}`
       // replace date obj with new formatted date obj
