@@ -178,12 +178,14 @@ const formatThaiDate = (array) => {
       for (const [key, value] of Object.entries(thai_month)) {
         let regex = new RegExp(key, 'g')
         let formatmonth = raw_date.match(regex)
-        if (formatmonth !== NaN) {
-          month = value
-          break;
-        } else {
-          console.log(`Error: formatting month ${formatmonth}`);
-          process.exit(1)
+        if (formatmonth !== null) {
+          if (value !== NaN) {
+            month = value
+            break;
+          } else {
+            console.log(`Error: formatting month ${value}`);
+            process.exit(1)
+          }
         }
       }
       
