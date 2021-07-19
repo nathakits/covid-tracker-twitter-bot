@@ -217,7 +217,7 @@ const sinovacArray = (obj) => {
 
 // TODO: update this
 // alotted vaccines
-const calcVaccinesLeft = (obj) => {
+const calcVaccineAlottment = (obj) => {
   return new Promise(resolve => {
     let totalDoses = obj.total_doses.replace(/\s|,/g, "")
     let totalVaccinations = obj.total_vaccinations.replace(/\s|,/g, "")
@@ -227,12 +227,30 @@ const calcVaccinesLeft = (obj) => {
   })
 }
 
+const checkDuplicateData = (obj) => {
+  return new Promise(resolve => {
+    const data = require('../data/vaccinations.json');
+    delete obj.country
+    for (const prop in obj) {
+      if ( obj[prop] === data[prop] ) {
+        console.log(`Error: duplicate data`);
+        console.log(`${prop} - ${obj[prop]}`)
+        process.exit(1)
+      } else {
+        console.log("Check passed")
+      }
+    }
+    resolve(obj)
+  })
+}
+
 const scrapePDF2JSON = async (res, regexArr) => {
   let text = await replaceChars(res)
   let matched = await matchAll(text, regexArr)
   let array = await formatThaiDate(matched)
   let formattedJSON = await cleanArray(array)
-  // let calcJSON = await calcVaccinesLeft(formattedJSON)
+  await checkDuplicateData(formattedJSON)
+  // let calcJSON = await calcVaccineAlottment(formattedJSON)
   return formattedJSON
 }
 
