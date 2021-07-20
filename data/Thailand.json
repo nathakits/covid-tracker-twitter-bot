@@ -1335,7 +1335,7 @@
     "location": "Thailand",
     "date": "16-07-2021",
     "vaccine": "Oxford/AstraZeneca, Sinovac, Sinopharm",
-    "source_url": "https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-17.pdf",
+    "source_url": "https://ddc.moph.go.th/uploads/ckeditor2//files/Dailr%20report%202021-07-17.pdf",
     "total_vaccinations": "14130489",
     "people_vaccinated": "10697578",
     "people_fully_vaccinated": "3432911",
@@ -1366,5 +1366,17 @@
     "total_dose_plus": "74834",
     "first_dose_plus": "69667",
     "second_dose_plus": "5167"
+  },
+  {
+    "location": "Thailand",
+    "date": "19-07-2021",
+    "vaccine": "Oxford/AstraZeneca, Sinovac, Sinopharm",
+    "source_url": "https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-20.pdf",
+    "total_vaccinations": "14547244",
+    "people_vaccinated": "11067518",
+    "people_fully_vaccinated": "3479726",
+    "total_dose_plus": "248648",
+    "first_dose_plus": "217419",
+    "second_dose_plus": "31229"
   }
 ]
