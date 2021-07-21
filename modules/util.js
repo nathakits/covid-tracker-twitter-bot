@@ -129,11 +129,7 @@ const replaceChars = (res) => {
 
 const matchAll = (text, array) => {
   return new Promise(resolve => {
-    let arr = [{
-      last_updated: currentDateTime,
-      country: `Thailand`,
-      vaccines: [`Oxford/AstraZeneca`, `Sinovac`, `Sinopharm`]
-    }]
+    let arr = [{}]
     let matched = []
     array.forEach(regex => {
       let found = text.match(regex)
@@ -230,7 +226,6 @@ const calcVaccineAlottment = (obj) => {
 const checkDuplicateData = (obj) => {
   return new Promise(resolve => {
     const data = require('../data/vaccinations.json');
-    delete obj.country
     for (const prop in obj) {
       if ( obj[prop] === data[prop] ) {
         console.log(`Error: duplicate data`);
@@ -244,14 +239,30 @@ const checkDuplicateData = (obj) => {
   })
 }
 
+const combineData = (obj) => {
+  return new Promise(resolve => {
+    const additionalData = {
+      last_updated: currentDateTime,
+      country: `Thailand`,
+      vaccines: [`Oxford/AstraZeneca`, `Sinovac`, `Sinopharm`]
+    }
+    const combinedObj = {
+      ...additionalData,
+      ...obj,
+    }
+    resolve(combinedObj)
+  })
+}
+
 const scrapePDF2JSON = async (res, regexArr) => {
-  let text = await replaceChars(res)
-  let matched = await matchAll(text, regexArr)
-  let array = await formatThaiDate(matched)
-  let formattedJSON = await cleanArray(array)
-  await checkDuplicateData(formattedJSON)
+  const text = await replaceChars(res)
+  const matched = await matchAll(text, regexArr)
+  const array = await formatThaiDate(matched)
+  const formattedJSON = await cleanArray(array)
+  const checkData = await checkDuplicateData(formattedJSON)
+  const json = await combineData(checkData)
   // let calcJSON = await calcVaccineAlottment(formattedJSON)
-  return formattedJSON
+  return json
 }
 
 module.exports = {
