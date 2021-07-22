@@ -44,5 +44,5 @@ jobs:
         git config user.name "nathakits"
         git config user.email nathakit.tan@gmail.com
         git add .
-        git commit -m "[bot] auto update vaccine data"
+        git commit -m "[bot 🤖] auto update vaccine data"
         git push
