@@ -1390,5 +1390,17 @@
     "total_dose_plus": "257876",
     "first_dose_plus": "225061",
     "second_dose_plus": "32815"
+  },
+  {
+    "location": "Thailand",
+    "date": "21-07-2021",
+    "vaccine": "Oxford/AstraZeneca, Sinovac, Sinopharm",
+    "source_url": "https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-22.pdf",
+    "total_vaccinations": "15084696",
+    "people_vaccinated": "11538866",
+    "people_fully_vaccinated": "3545830",
+    "total_dose_plus": "279576",
+    "first_dose_plus": "246287",
+    "second_dose_plus": "33289"
   }
 ]
