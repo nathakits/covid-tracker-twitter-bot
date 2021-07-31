@@ -30,6 +30,12 @@ jobs:
     # write full JSON
     - name: Update JSON
       run: npm run tojson
+    # stream and write JSON
+    - name: Stream CSV to JSON
+      run: npm run streamcsv
+    # write vac allocation json
+    - name: Write vac allocation json
+      run: npm run allocation
     # tweet and update banner
     - name: Tweet and update banner
       run: npm run build
