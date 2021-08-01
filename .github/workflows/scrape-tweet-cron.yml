@@ -33,9 +33,9 @@ jobs:
     # stream and write JSON
     - name: Stream CSV to JSON
       run: npm run streamcsv
-    # write vac allocation json
-    - name: Write vac allocation json
-      run: npm run allocation
+    # write vac data to json
+    - name: Write vac data to json
+      run: npm run data2json
     # tweet and update banner
     - name: Tweet and update banner
       run: npm run build
