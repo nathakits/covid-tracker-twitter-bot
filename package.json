@@ -8,7 +8,7 @@
     "tocsv": "node --trace-warnings ./modules/json2csv.js",
     "tojson": "node --trace-warnings ./modules/csv2json.js",
     "streamcsv": "node --trace-warnings ./modules/streamCSV2json.js",
-    "allocation": "node --trace-warnings ./modules/mapVacAllocation.js",
+    "data2json": "node --trace-warnings ./modules/map-vac-timeline.js",
     "build": "node --trace-warnings index.js",
     "test": "node --trace-warnings test.js"
   },
