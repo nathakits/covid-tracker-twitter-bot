@@ -1,12 +1,12 @@
 {
-  "last_updated": "02-08-2021 11:26:32AM",
+  "last_updated": "02-08-2021 19:1:8PM",
   "country": "Thailand",
   "vaccines": [
     "Oxford/AstraZeneca",
     "Sinovac",
     "Sinopharm"
   ],
-  "date": "01-NaN-2021",
+  "date": "01-08-2021",
   "total_vaccinations": "17,866,526",
   "people_vaccinated": "13,955,087",
   "people_fully_vaccinated": "3,911,439",
