@@ -6,7 +6,7 @@ const axios = require('axios')
 const { JSDOM } = require('jsdom')
 
 // vars
-let weburl = `https://ddc.moph.go.th/dcd/pagecontent.php?page=723&dept=dcd`
+let weburl = `https://ddc.moph.go.th/dcd/pagecontent.php?page=735&dept=dcd`
 let regexArray = [
   /\วันที่\s*(?<date>.{1,30})\s*เวลา\s*18.00\s*น.\s*\)/,
   /2564\s*ทั้งหมด\s*(?<total_vaccinations>.{1,40})\s*โดส/,
