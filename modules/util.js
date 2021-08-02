@@ -109,21 +109,22 @@ const drawProgressBar = (percentage, max, barEmpty, barFull) => {
 // PDF to JSON
 const replaceChars = (res) => {
   return new Promise(resolve => {
-    let firstPass = res.text.replace(/จ ํานวน/g, 'จำนวน')
-    let secondPass = firstPass.replace(/รําย/g, 'ราย')
-    let thirdPass = secondPass.replace(/เวลํา/g, 'เวลา')
-    let forthPass = thirdPass.replace(/เมษํายน/g, 'เมษายน')
-    let fifthPass = forthPass.replace(/ขอมูล/g, 'ข้อมูล')
-    let sixthPass = fifthPass.replace(/พฤษภําคม/g, 'พฤษภาคม')
-    let seventhPass = sixthPass.replace(/\n/g, '')
-    let eighthPass = seventhPass.replace(/ได/g, 'ได้')
-    let ninthPass = eighthPass.replace(/จ านวน/g, 'จำนวน')
-    let tenthPass = ninthPass.replace(/ตําม/g, 'ตาม')
-    let eleventhPass = tenthPass.replace(/มิถุนํายน/g, 'มิถุนายน')
-    let twelfthPass = eleventhPass.replace(/กรกฎําคม/g, 'กรกฎาคม')
+    let _1Pass = res.text.replace(/จ ํานวน/g, 'จำนวน')
+    let _2Pass = _1Pass.replace(/รําย/g, 'ราย')
+    let _3Pass = _2Pass.replace(/เวลํา/g, 'เวลา')
+    let _4Pass = _3Pass.replace(/เมษํายน/g, 'เมษายน')
+    let _5Pas = _4Pass.replace(/ขอมูล/g, 'ข้อมูล')
+    let _6Pass = _5Pas.replace(/พฤษภําคม/g, 'พฤษภาคม')
+    let _7Pass = _6Pass.replace(/\n/g, '')
+    let _8Pass = _7Pass.replace(/ได/g, 'ได้')
+    let _9Pass = _8Pass.replace(/จ านวน/g, 'จำนวน')
+    let _10Pass = _9Pass.replace(/ตําม/g, 'ตาม')
+    let _11Pass = _10Pass.replace(/มิถุนํายน/g, 'มิถุนายน')
+    let _12Pass = _11Pass.replace(/กรกฎําคม/g, 'กรกฎาคม')
+    let _13Pass = _12Pass.replace(/สิงหําคม/g, 'สิงหาคม')
     // let stringify = JSON.stringify(twelfthPass, null, 2)
     // fs.writeFileSync(`./data/pdf_res.json`, stringify)
-    resolve(twelfthPass)
+    resolve(_13Pass)
   })
 }
 
@@ -173,20 +174,23 @@ const formatThaiDate = (array) => {
       // match and update the month to number
       for (const [key, value] of Object.entries(thai_month)) {
         let regex = new RegExp(key, 'g')
-        let formatmonth = raw_date.match(regex)
-        if (formatmonth) {
-          if (value !== NaN) {
-            month = value
-            break;
-          } else {
-            console.log(`Error: formatting month ${value}`);
-            process.exit(1)
-          }
+        let monthMatch = raw_date.match(regex)
+        if (monthMatch) {
+          month = value
         }
       }
-      
-      // create a new obj
-      let fullDate = `${formatDate(date)}-${month}-${year}`
+
+      const currentDate = new Date()
+      const currentMonth = new Intl.DateTimeFormat('en-US', { month: '2-digit' }).format(currentDate)
+
+      let fullDate = ""
+      if (month === currentMonth) {
+        fullDate = `${formatDate(date)}-${month}-${year}`
+      } else {
+        console.log(`Error: formatting month`);
+        process.exit(1)
+      }
+
       // replace date obj with new formatted date obj
       array[0].date = fullDate
     }
