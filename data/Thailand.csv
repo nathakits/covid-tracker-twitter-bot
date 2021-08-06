@@ -1,132 +1,133 @@
-location,date,vaccine,source_url,total_vaccinations,people_vaccinated,people_fully_vaccinated,total_dose_plus,first_dose_plus,second_dose_plus
-Thailand,27-02-2021,Sinovac,https://www.bangkokpost.com/thailand/general/2076339/thailand-adds-80-covid-cases-monday,0,0,0,0,0,0
-Thailand,01-03-2021,Sinovac,https://www.bangkokpost.com/thailand/general/2076339/thailand-adds-80-covid-cases-monday,319,319,0,0,0,0
-Thailand,02-03-2021,Sinovac,https://thestandard.co/people-who-have-been-vaccinated-against-covid-19-in-thailand/,7262,7262,0,0,0,0
-Thailand,10-03-2021,Sinovac,https://www.rfa.org/english/news/myanmar/vaccinate-03102021170611.html,33621,33621,0,0,0,0
-Thailand,13-03-2021,"Oxford/AstraZeneca, Sinovac",https://thethaiger.com/coronavirus/thailands-private-hospitals-planning-to-profit-off-covid-19-vaccine,53842,53842,0,0,0,0
-Thailand,24-03-2021,"Oxford/AstraZeneca, Sinovac",https://www.archyde.com/update-96188-cumulative-covid-vaccination-new-lot-which-province-get-how-much-check-now/,102050,96188,5862,0,0,0
-Thailand,30-03-2021,"Oxford/AstraZeneca, Sinovac",https://www.facebook.com/OICDDC/posts/3823323381121560,180477,151413,29064,0,0,0
-Thailand,01-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-02.pdf,204642,167235,37407,12899,8740,4159
-Thailand,02-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-03.pdf,231882,189666,42216,27240,22431,4809
-Thailand,03-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-04.pdf,244254,201864,42390,12380,12198,182
-Thailand,04-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-05.pdf,257484,213948,43536,13233,12087,1146
-Thailand,05-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-04-06.pdf,294881,247850,47031,37397,33902,3495
-Thailand,06-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-04-07.pdf,323989,274354,49635,29108,26504,2604
-Thailand,07-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-04-08.pdf,391752,336808,54944,67763,62454,5309
-Thailand,08-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-04-09.pdf,466374,405911,60463,74622,69103,5519
-Thailand,09-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-04-10.pdf,537380,470301,67079,71006,64390,6616
-Thailand,10-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-04-11.pdf,555396,485957,69439,18016,15656,2360
-Thailand,11-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-04-12.pdf,570052,498791,71261,14656,12834,1822
-Thailand,12-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-13.pdf,578532,505215,73317,8480,6424,2056
-Thailand,13-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-14.pdf,579305,505744,73561,773,529,244
-Thailand,15-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-16.pdf,586032,510456,75576,4724,3096,1628
-Thailand,16-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-17.pdf,605259,523830,81429,19227,13374,5853
-Thailand,17-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-18.pdf,608521,526706,81815,3262,2876,386
-Thailand,18-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-19.pdf,618583,535925,82658,10662,9219,843
-Thailand,19-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-20.pdf,666210,571825,94385,47627,35900,11727
-Thailand,20-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-21.pdf,712610,604947,107663,46401,33122,13279
-Thailand,21-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-22.pdf,864840,746617,118223,152230,141670,10560
-Thailand,22-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-23.pdf,964825,834082,130743,99985,87465,12520
-Thailand,23-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-2021-04-24.pdf,1095445,934449,160996,130620,100367,30253
-Thailand,24-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-25.pdf,1124153,949124,175029,28708,14675,14033
-Thailand,25-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/daily%20report%202021-04-26.pdf,1149666,972204,177462,25513,23080,2433
-Thailand,26-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-27.pdf,1227032,1012388,214644,77366,40184,37182
-Thailand,27-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-28.pdf,1279713,1038960,240753,52681,26572,26109
-Thailand,28-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-29.pdf,1344646,1059721,284925,64933,20761,44172
-Thailand,29-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-30.pdf,1411614,1075756,335858,66968,16035,50933
-Thailand,30-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-01.pdf,1477078,1095230,381848,65464,19474,45990
-Thailand,01-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-02.pdf,1484565,1097862,386703,7487,2632,4855
-Thailand,02-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-03.pdf,1486907,1099460,387447,2342,1598,744
-Thailand,03-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-04.pdf,1498617,1106071,392546,11710,6611,5099
-Thailand,04-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-05.V2.pdf,1573075,1150564,422511,74485,44493,29965
-Thailand,05-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-06.pdf,1601833,1167719,434114,28758,17155,11603
-Thailand,06-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-07.pdf,1651782,1201258,450524,49949,33538,16410
-Thailand,07-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-08.pdf,1730488,1262703,467785,78706,61445,17261
-Thailand,08-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-09.pdf,1743720,1273666,470054,13232,10963,2269
-Thailand,09-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-10.pdf,1809894,1296440,513454,66174,22774,43400
-Thailand,10-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-11.pdf,1898454,1365992,532462,88560,69552,19008
-Thailand,11-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-12.pdf,1935565,1372013,563552,37111,6021,31090
-Thailand,12-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-13.pdf,2040363,1395130,645233,104282,22753,81529
-Thailand,13-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-14.pdf,2124732,1416732,708300,84369,21302,63067
-Thailand,15-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-16.pdf,2242150,1462762,779388,23730,17334,6396
-Thailand,16-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-17.pdf,2264308,1482702,781606,22158,19940,2218
-Thailand,17-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-18(1).pdf,2340995,1521034,819961,76687,38332,38355
-Thailand,18-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-19.pdf,2445645,1585773,859872,104650,64739,39911
-Thailand,19-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-20.pdf,2540116,1647871,892245,94471,62098,32373
-Thailand,20-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-21.pdf,2648256,1726431,921825,108140,78560,29580
-Thailand,21-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-22.pdf,2811549,1849393,962156,163293,122962,40331
-Thailand,22-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-23.pdf,2865091,1898332,966759,53542,48939,4603
-Thailand,23-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-24.pdf,2910664,1941565,969099,45573,43233,42340
-Thailand,24-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-25.pdf,3024313,2044123,980190,113649,102558,11091
-Thailand,25-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-26.pdf,3147227,2157609,989618,122914,113486,9428
-Thailand,26-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-27.pdf,3208882,2214721,994161,61655,57112,4543
-Thailand,27-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-28.pdf,3347050,2319304,1027746,138168,104583,33585
-Thailand,28-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-29%20.pdf,3504125,2415903,1088222,157075,96599,60476
-Thailand,29-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-30.pdf,3548330,2453807,1094523,44205,37904,6301
-Thailand,30-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-31.pdf,3609882,2498929,1110953,61552,45122,16430
-Thailand,31-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-01.pdf,3644859,2539491,1125368,54977,40562,14415
-Thailand,01-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-02.pdf,3753718,2591372,1162346,88859,51881,36978
-Thailand,02-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-03.pdf,3959356,2738289,1221067,205638,146917,58721
-Thailand,03-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-04.pdf,3961589,2727759,1233830,56019,24786,31233
-Thailand,04-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-05.pdf,4142944,2818676,1324268,181355,90917,90438
-Thailand,05-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-06.pdf,4190503,2845287,1345216,47559,26611,20948
-Thailand,06-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-07.pdf,4218094,2855041,1363053,27591,9754,17837
-Thailand,07-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-08.pdf,4634941,3243913,1391028,416847,388872,27975
-Thailand,08-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-09.pdf,5107069,3672372,1434697,472128,428459,43669
-Thailand,09-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-10.pdf,5443743,3966091,1477652,336674,293719,42955
-Thailand,10-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-11v2.pdf,5667058,4143444,1523614,223315,177353,45962
-Thailand,11-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-12.pdf,5975070,4362685,1612835,308012,219241,88771
-Thailand,12-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-13.pdf,6081242,4456786,1624456,108204,66037,42167
-Thailand,13-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-14.pdf,6188124,4531914,1656210,106882,75128,31754
-Thailand,14-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-15.pdf,6511184,4762063,1749121,323060,230149,92911
-Thailand,15-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-16.pdf,6780816,4948227,1832589,269632,186164,83468
-Thailand,16-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-17.pdf,7003783,5114755,1889028,222967,166528,56439
-Thailand,17-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-18.pdf,7219668,5252531,1967137,215885,137776,78109
-Thailand,18-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-19.pdf,7483083,5434119,2048964,263415,181588,81827
-Thailand,19-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-20.pdf,7587178,5486092,2101086,104095,51973,52122
-Thailand,20-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/vaccine-covid19/getFiles/9/1624263263473.pdf,7679057,5526039,2153018,91879,39947,51932
-Thailand,21-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-22.pdf,7906696,5678848,2227848,227639,152809,74830
-Thailand,22-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-23.pdf,8148335,5844521,2303814,241639,165673,75966
-Thailand,23-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-24.pdf,8400320,6017424,2382896,251985,172903,79082
-Thailand,24-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20Report%202021-06-25.pdf,8657423,6206353,2451070,257103,189929,68174
-Thailand,25-06-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-26.pdf,8981478,6435308,2546170,324055,228955,95100
-Thailand,26-06-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-27.pdf,9055141,6475826,2579315,74075,40930,33145
-Thailand,27-06-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-28.pdf,9147513,6537852,2609661,93577,63231,30346
-Thailand,28-06-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-29.pdf,9416972,6721038,2695394,269459,183186,86273
-Thailand,29-06-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-30.pdf,9672706,6910169,2762537,255734,189131,66603
-Thailand,30-06-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-01.pdf,9927698,7110854,2816844,254992,200685,54307
-Thailand,01-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://twitter.com/KhaosodEnglish/status/1410873487892176896,10227183,7364585,2862598,299485,253731,45754
-Thailand,02-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-02.pdf,10572292,7640118,2932174,345109,275533,69576
-Thailand,03-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-04.pdf",10670897,7721150,2949747,98605,81032,17573
-Thailand,04-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-05.pdf",10777748,7804654,2973094,106851,83504,23347
-Thailand,05-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-06.pdf",11058390,8022029,3036361,280642,217375,63267
-Thailand,06-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-07.pdf",11328043,8245297,3082746,269653,223268,46385
-Thailand,07-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-08.pdf",11619618,8494230,3125388,291575,248933,42642
-Thailand,08-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-09.pdf",11975996,8800155,3175841,356378,305925,50453
-Thailand,09-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-10.pdf",12375904,9130526,3245378,399908,330371,69537
-Thailand,10-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-11.pdf",12469188,9213598,3255590,93284,83072,10212
-Thailand,11-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-12.pdf",12569213,9301407,3267806,100025,87809,12216
-Thailand,12-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-13.pdf",12908193,9598949,3309244,338980,297542,41438
-Thailand,13-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-14.pdf",13230681,9888124,3342557,322488,289175,33313
-Thailand,14-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-15.pdf",13533717,10163340,3370377,303036,275216,27820
-Thailand,15-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-16.pdf",13823355,10424925,3398430,289998,261809,28189
-Thailand,16-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Dailr%20report%202021-07-17.pdf",14130489,10697578,3432911,307134,272653,34481
-Thailand,17-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-18.pdf",14223762,10780432,3443330,93273,82854,10419
-Thailand,18-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-19.pdf",14298596,10850099,3448497,74834,69667,5167
-Thailand,19-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-20.pdf",14547244,11067518,3479726,248648,217419,31229
-Thailand,20-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-21.pdf",14805120,11292579,3512541,257876,225061,32815
-Thailand,21-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-22.pdf",15084696,11538866,3545830,279576,246287,33289
-Thailand,22-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-23.pdf",15388939,11805180,3583759,304243,266314,37929
-Thailand,23-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-24.pdf",15741818,12109424,3632394,352879,304244,48635
-Thailand,24-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-25.pdf",15869844,12226845,3642999,128026,117421,10605
-Thailand,25-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-26.pdf",15960778,12307788,3652990,90934,80943,9991
-Thailand,26-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202012-07-27.pdf",16099670,12429925,3669745,138892,122137,16755
-Thailand,27-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-28.pdf",16427059,12714312,3712747,327389,284387,43002
-Thailand,28-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-29.pdf",16591329,12858570,3732759,164270,144258,20012
-Thailand,29-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-30.pdf",17011477,13225233,3786244,420148,366663,53485
-Thailand,30-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-31.pdf",17491632,13640179,3851453,480155,414946,65209
-Thailand,31-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-08-01.pdf",17685974,13802916,3883058,194342,162737,31605
-Thailand,01-08-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-08-02.pdf",17866526,13955087,3911439,180552,152171,28381
-Thailand,02-08-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-08-03.pdf",18198825,14207477,3991348,332299,252390,79909
-Thailand,03-08-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-08-04.pdf",18578096,14492385,4085711,379271,284908,94363
-Thailand,04-08-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-08-05.pdf",18961703,14783001,4178702,383607,290616,92991
+location,date,vaccine,source_url,total_vaccinations,people_vaccinated,people_fully_vaccinated,booster_vaccinated,total_dose_plus,first_dose_plus,second_dose_plus,third_dose_plus
+Thailand,27-02-2021,Sinovac,https://www.bangkokpost.com/thailand/general/2076339/thailand-adds-80-covid-cases-monday,0,0,0,0,0,0,0,0
+Thailand,01-03-2021,Sinovac,https://www.bangkokpost.com/thailand/general/2076339/thailand-adds-80-covid-cases-monday,319,319,0,0,0,0,0,0
+Thailand,02-03-2021,Sinovac,https://thestandard.co/people-who-have-been-vaccinated-against-covid-19-in-thailand/,7262,7262,0,0,0,0,0,0
+Thailand,10-03-2021,Sinovac,https://www.rfa.org/english/news/myanmar/vaccinate-03102021170611.html,33621,33621,0,0,0,0,0,0
+Thailand,13-03-2021,"Oxford/AstraZeneca, Sinovac",https://thethaiger.com/coronavirus/thailands-private-hospitals-planning-to-profit-off-covid-19-vaccine,53842,53842,0,0,0,0,0,0
+Thailand,24-03-2021,"Oxford/AstraZeneca, Sinovac",https://www.archyde.com/update-96188-cumulative-covid-vaccination-new-lot-which-province-get-how-much-check-now/,102050,96188,5862,0,0,0,0,0
+Thailand,30-03-2021,"Oxford/AstraZeneca, Sinovac",https://www.facebook.com/OICDDC/posts/3823323381121560,180477,151413,29064,0,0,0,0,0
+Thailand,01-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-02.pdf,204642,167235,37407,0,12899,8740,4159,0
+Thailand,02-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-03.pdf,231882,189666,42216,0,27240,22431,4809,0
+Thailand,03-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-04.pdf,244254,201864,42390,0,12380,12198,182,0
+Thailand,04-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-05.pdf,257484,213948,43536,0,13233,12087,1146,0
+Thailand,05-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-04-06.pdf,294881,247850,47031,0,37397,33902,3495,0
+Thailand,06-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-04-07.pdf,323989,274354,49635,0,29108,26504,2604,0
+Thailand,07-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-04-08.pdf,391752,336808,54944,0,67763,62454,5309,0
+Thailand,08-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-04-09.pdf,466374,405911,60463,0,74622,69103,5519,0
+Thailand,09-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-04-10.pdf,537380,470301,67079,0,71006,64390,6616,0
+Thailand,10-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-04-11.pdf,555396,485957,69439,0,18016,15656,2360,0
+Thailand,11-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-04-12.pdf,570052,498791,71261,0,14656,12834,1822,0
+Thailand,12-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-13.pdf,578532,505215,73317,0,8480,6424,2056,0
+Thailand,13-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-14.pdf,579305,505744,73561,0,773,529,244,0
+Thailand,15-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-16.pdf,586032,510456,75576,0,4724,3096,1628,0
+Thailand,16-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-17.pdf,605259,523830,81429,0,19227,13374,5853,0
+Thailand,17-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-18.pdf,608521,526706,81815,0,3262,2876,386,0
+Thailand,18-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-19.pdf,618583,535925,82658,0,10662,9219,843,0
+Thailand,19-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-20.pdf,666210,571825,94385,0,47627,35900,11727,0
+Thailand,20-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-21.pdf,712610,604947,107663,0,46401,33122,13279,0
+Thailand,21-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-22.pdf,864840,746617,118223,0,152230,141670,10560,0
+Thailand,22-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-23.pdf,964825,834082,130743,0,99985,87465,12520,0
+Thailand,23-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Dialy%20report%202021-2021-04-24.pdf,1095445,934449,160996,0,130620,100367,30253,0
+Thailand,24-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-25.pdf,1124153,949124,175029,0,28708,14675,14033,0
+Thailand,25-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/daily%20report%202021-04-26.pdf,1149666,972204,177462,0,25513,23080,2433,0
+Thailand,26-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-27.pdf,1227032,1012388,214644,0,77366,40184,37182,0
+Thailand,27-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-28.pdf,1279713,1038960,240753,0,52681,26572,26109,0
+Thailand,28-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-29.pdf,1344646,1059721,284925,0,64933,20761,44172,0
+Thailand,29-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-04-30.pdf,1411614,1075756,335858,0,66968,16035,50933,0
+Thailand,30-04-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-01.pdf,1477078,1095230,381848,0,65464,19474,45990,0
+Thailand,01-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-02.pdf,1484565,1097862,386703,0,7487,2632,4855,0
+Thailand,02-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-03.pdf,1486907,1099460,387447,0,2342,1598,744,0
+Thailand,03-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-04.pdf,1498617,1106071,392546,0,11710,6611,5099,0
+Thailand,04-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-05.V2.pdf,1573075,1150564,422511,0,74485,44493,29965,0
+Thailand,05-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-06.pdf,1601833,1167719,434114,0,28758,17155,11603,0
+Thailand,06-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-07.pdf,1651782,1201258,450524,0,49949,33538,16410,0
+Thailand,07-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-08.pdf,1730488,1262703,467785,0,78706,61445,17261,0
+Thailand,08-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-09.pdf,1743720,1273666,470054,0,13232,10963,2269,0
+Thailand,09-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-10.pdf,1809894,1296440,513454,0,66174,22774,43400,0
+Thailand,10-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-11.pdf,1898454,1365992,532462,0,88560,69552,19008,0
+Thailand,11-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-12.pdf,1935565,1372013,563552,0,37111,6021,31090,0
+Thailand,12-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-13.pdf,2040363,1395130,645233,0,104282,22753,81529,0
+Thailand,13-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-14.pdf,2124732,1416732,708300,0,84369,21302,63067,0
+Thailand,15-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-16.pdf,2242150,1462762,779388,0,23730,17334,6396,0
+Thailand,16-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-17.pdf,2264308,1482702,781606,0,22158,19940,2218,0
+Thailand,17-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-18(1).pdf,2340995,1521034,819961,0,76687,38332,38355,0
+Thailand,18-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-19.pdf,2445645,1585773,859872,0,104650,64739,39911,0
+Thailand,19-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-20.pdf,2540116,1647871,892245,0,94471,62098,32373,0
+Thailand,20-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-21.pdf,2648256,1726431,921825,0,108140,78560,29580,0
+Thailand,21-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-22.pdf,2811549,1849393,962156,0,163293,122962,40331,0
+Thailand,22-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-23.pdf,2865091,1898332,966759,0,53542,48939,4603,0
+Thailand,23-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-24.pdf,2910664,1941565,969099,0,45573,43233,42340,0
+Thailand,24-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-25.pdf,3024313,2044123,980190,0,113649,102558,11091,0
+Thailand,25-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-26.pdf,3147227,2157609,989618,0,122914,113486,9428,0
+Thailand,26-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-27.pdf,3208882,2214721,994161,0,61655,57112,4543,0
+Thailand,27-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-28.pdf,3347050,2319304,1027746,0,138168,104583,33585,0
+Thailand,28-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-29%20.pdf,3504125,2415903,1088222,0,157075,96599,60476,0
+Thailand,29-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-30.pdf,3548330,2453807,1094523,0,44205,37904,6301,0
+Thailand,30-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-05-31.pdf,3609882,2498929,1110953,0,61552,45122,16430,0
+Thailand,31-05-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-01.pdf,3644859,2539491,1125368,0,54977,40562,14415,0
+Thailand,01-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-02.pdf,3753718,2591372,1162346,0,88859,51881,36978,0
+Thailand,02-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-03.pdf,3959356,2738289,1221067,0,205638,146917,58721,0
+Thailand,03-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-04.pdf,3961589,2727759,1233830,0,56019,24786,31233,0
+Thailand,04-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-05.pdf,4142944,2818676,1324268,0,181355,90917,90438,0
+Thailand,05-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-06.pdf,4190503,2845287,1345216,0,47559,26611,20948,0
+Thailand,06-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-07.pdf,4218094,2855041,1363053,0,27591,9754,17837,0
+Thailand,07-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-08.pdf,4634941,3243913,1391028,0,416847,388872,27975,0
+Thailand,08-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-09.pdf,5107069,3672372,1434697,0,472128,428459,43669,0
+Thailand,09-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-10.pdf,5443743,3966091,1477652,0,336674,293719,42955,0
+Thailand,10-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-11v2.pdf,5667058,4143444,1523614,0,223315,177353,45962,0
+Thailand,11-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-12.pdf,5975070,4362685,1612835,0,308012,219241,88771,0
+Thailand,12-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-13.pdf,6081242,4456786,1624456,0,108204,66037,42167,0
+Thailand,13-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-14.pdf,6188124,4531914,1656210,0,106882,75128,31754,0
+Thailand,14-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-15.pdf,6511184,4762063,1749121,0,323060,230149,92911,0
+Thailand,15-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-16.pdf,6780816,4948227,1832589,0,269632,186164,83468,0
+Thailand,16-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-17.pdf,7003783,5114755,1889028,0,222967,166528,56439,0
+Thailand,17-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-18.pdf,7219668,5252531,1967137,0,215885,137776,78109,0
+Thailand,18-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-19.pdf,7483083,5434119,2048964,0,263415,181588,81827,0
+Thailand,19-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-20.pdf,7587178,5486092,2101086,0,104095,51973,52122,0
+Thailand,20-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/vaccine-covid19/getFiles/9/1624263263473.pdf,7679057,5526039,2153018,0,91879,39947,51932,0
+Thailand,21-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-22.pdf,7906696,5678848,2227848,0,227639,152809,74830,0
+Thailand,22-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-23.pdf,8148335,5844521,2303814,0,241639,165673,75966,0
+Thailand,23-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-24.pdf,8400320,6017424,2382896,0,251985,172903,79082,0
+Thailand,24-06-2021,"Oxford/AstraZeneca, Sinovac",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20Report%202021-06-25.pdf,8657423,6206353,2451070,0,257103,189929,68174,0
+Thailand,25-06-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-26.pdf,8981478,6435308,2546170,0,324055,228955,95100,0
+Thailand,26-06-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-27.pdf,9055141,6475826,2579315,0,74075,40930,33145,0
+Thailand,27-06-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-28.pdf,9147513,6537852,2609661,0,93577,63231,30346,0
+Thailand,28-06-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-29.pdf,9416972,6721038,2695394,0,269459,183186,86273,0
+Thailand,29-06-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-06-30.pdf,9672706,6910169,2762537,0,255734,189131,66603,0
+Thailand,30-06-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-01.pdf,9927698,7110854,2816844,0,254992,200685,54307,0
+Thailand,01-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://twitter.com/KhaosodEnglish/status/1410873487892176896,10227183,7364585,2862598,0,299485,253731,45754,0
+Thailand,02-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-02.pdf,10572292,7640118,2932174,0,345109,275533,69576,0
+Thailand,03-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-04.pdf,10670897,7721150,2949747,0,98605,81032,17573,0
+Thailand,04-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-05.pdf,10777748,7804654,2973094,0,106851,83504,23347,0
+Thailand,05-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-06.pdf,11058390,8022029,3036361,0,280642,217375,63267,0
+Thailand,06-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-07.pdf,11328043,8245297,3082746,0,269653,223268,46385,0
+Thailand,07-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-08.pdf,11619618,8494230,3125388,0,291575,248933,42642,0
+Thailand,08-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-09.pdf,11975996,8800155,3175841,0,356378,305925,50453,0
+Thailand,09-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-10.pdf,12375904,9130526,3245378,0,399908,330371,69537,0
+Thailand,10-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-11.pdf,12469188,9213598,3255590,0,93284,83072,10212,0
+Thailand,11-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-12.pdf,12569213,9301407,3267806,0,100025,87809,12216,0
+Thailand,12-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-13.pdf,12908193,9598949,3309244,0,338980,297542,41438,0
+Thailand,13-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-14.pdf,13230681,9888124,3342557,0,322488,289175,33313,0
+Thailand,14-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-15.pdf,13533717,10163340,3370377,0,303036,275216,27820,0
+Thailand,15-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-16.pdf,13823355,10424925,3398430,0,289998,261809,28189,0
+Thailand,16-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Dailr%20report%202021-07-17.pdf,14130489,10697578,3432911,0,307134,272653,34481,0
+Thailand,17-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-18.pdf,14223762,10780432,3443330,0,93273,82854,10419,0
+Thailand,18-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-19.pdf,14298596,10850099,3448497,0,74834,69667,5167,0
+Thailand,19-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-20.pdf,14547244,11067518,3479726,0,248648,217419,31229,0
+Thailand,20-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-21.pdf,14805120,11292579,3512541,0,257876,225061,32815,0
+Thailand,21-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-22.pdf,15084696,11538866,3545830,0,279576,246287,33289,0
+Thailand,22-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-23.pdf,15388939,11805180,3583759,0,304243,266314,37929,0
+Thailand,23-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-24.pdf,15741818,12109424,3632394,0,352879,304244,48635,0
+Thailand,24-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-25.pdf,15869844,12226845,3642999,0,128026,117421,10605,0
+Thailand,25-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-26.pdf,15960778,12307788,3652990,0,90934,80943,9991,0
+Thailand,26-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202012-07-27.pdf,16099670,12429925,3669745,0,138892,122137,16755,0
+Thailand,27-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-28.pdf,16427059,12714312,3712747,0,327389,284387,43002,0
+Thailand,28-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-29.pdf,16591329,12858570,3732759,0,164270,144258,20012,0
+Thailand,29-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-30.pdf,17011477,13225233,3786244,0,420148,366663,53485,0
+Thailand,30-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-07-31.pdf,17491632,13640179,3851453,0,480155,414946,65209,0
+Thailand,31-07-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-08-01.pdf,17685974,13802916,3883058,0,194342,162737,31605,0
+Thailand,01-08-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-08-02.pdf,17866526,13955087,3911439,0,180552,152171,28381,0
+Thailand,02-08-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-08-03.pdf,18198825,14207477,3991348,0,332299,252390,79909,0
+Thailand,03-08-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-08-04.pdf,18578096,14492385,4085711,0,379271,284908,94363,0
+Thailand,04-08-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm",https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-08-05.pdf,18961703,14783001,4178702,0,383607,290616,92991,0
+Thailand,05-08-2021,"Oxford/AstraZeneca, Sinovac, Sinopharm, Pfizer","https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%202021-08-06.pdf",19632537,15180276,4277071,175190,670834,397275,98369,175190
