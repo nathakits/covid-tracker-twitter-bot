@@ -31,10 +31,11 @@ const calcProgressBar = () => {
   let progressBar2 = `\n\n2nd dose: ${percentage2Dose}% (+${percentage2DosePlus}%)\n${progressbar2Dose}`
   let progressNum1Dose = `\n\n1st dose: ${data.people_vaccinated} (+${data.first_dose_plus})`
   let progressNum2Dose = `\n2nd dose: ${data.people_fully_vaccinated} (+${data.second_dose_plus})`
+  let progressNum3Dose = `\n3rd dose: ${data.booster_vaccinated} (+${data.third_dose_plus})`
   let progressNumTotal = `\nTotal: ${data.total_vaccinations} (+${data.total_dose_plus})`
-  let dateOfData = `\n\n(As of ${data.date})`
+  let dateOfData = `\n\n${data.date}`
   // combine all sections
-  let progress = progressBar1 + progressBar2 + progressNum1Dose + progressNum2Dose + progressNumTotal + dateOfData
+  let progress = progressBar1 + progressBar2 + progressNum1Dose + progressNum2Dose + progressNum3Dose+ progressNumTotal + dateOfData
   // add to array
   thread.push(progress)
   console.log(thread);
