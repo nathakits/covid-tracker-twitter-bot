@@ -122,7 +122,7 @@ const replaceChars = (res) => {
     let _11Pass = _10Pass.replace(/มิถุนํายน/g, 'มิถุนายน')
     let _12Pass = _11Pass.replace(/กรกฎําคม/g, 'กรกฎาคม')
     let _13Pass = _12Pass.replace(/สิงหําคม/g, 'สิงหาคม')
-    // let stringify = JSON.stringify(twelfthPass, null, 2)
+    // let stringify = JSON.stringify(_13Pass, null, 2)
     // fs.writeFileSync(`./data/pdf_res.json`, stringify)
     resolve(_13Pass)
   })
@@ -248,7 +248,7 @@ const combineData = (obj) => {
     const additionalData = {
       last_updated: currentDateTime,
       country: `Thailand`,
-      vaccines: [`Oxford/AstraZeneca`, `Sinovac`, `Sinopharm`]
+      vaccines: [`Oxford/AstraZeneca`, `Sinovac`, `Sinopharm, Pfizer`]
     }
     const combinedObj = {
       ...additionalData,
