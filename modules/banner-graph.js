@@ -18,11 +18,12 @@ const height = 500; //px
 const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height })
 const filePath = path.join(__dirname, '../data/Thailand.csv');
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
-const titleText = `Thailand's Daily COVID-19 Vaccination Rate`
+const titleText = `Thailand's COVID-19 Daily Vaccination Rate`
 
 // color
 const firstDoseColor = "#00675b"
 const secondDoseColor = "#52c7b8"
+const thirdDoseColor = "#064e3b"
 const averageColor = "#303f9f"
 const targetColor = "#ff6f00"
 const textColor = "#111827"
@@ -37,6 +38,11 @@ const graph = async () => {
   const sliced = data.slice(Math.max(data.length - 14, 0))
   const firstDosePlusArr = sliced.map(el => el.first_dose_plus)
   const secondtDosePlusArr = sliced.map(el => el.second_dose_plus)
+  const thirdDosePlusArr = sliced.map(el => {
+    // if 0 then change to null
+    return el.third_dose_plus === "0" ? null : el.third_dose_plus
+  })
+  console.log(thirdDosePlusArr);
   const totalDosePlusArr = sliced.map(el => Number(el.total_dose_plus))
   const labelArr = sliced.map(el => el.date)
   // average
@@ -64,7 +70,6 @@ const graph = async () => {
           backgroundColor: firstDoseColor,
           borderColor: firstDoseColor,
           borderRadius: barRadius,
-          tension: 0.4,
           datalabels: {
             align: "start",
             anchor: "end",
@@ -78,9 +83,21 @@ const graph = async () => {
           backgroundColor: secondDoseColor,
           borderColor: secondDoseColor,
           borderRadius: barRadius,
-          tension: 0.4,
           datalabels: {
             color: "#111827",
+            align: "start",
+            anchor: "end",
+          },
+        },
+        {
+          type: "bar",
+          label: "3rd Dose     ",
+          data: thirdDosePlusArr,
+          fill: false,
+          backgroundColor: thirdDoseColor,
+          borderColor: thirdDoseColor,
+          borderRadius: barRadius,
+          datalabels: {
             align: "start",
             anchor: "end",
           },
