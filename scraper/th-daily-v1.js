@@ -12,9 +12,11 @@ let regexArray = [
   /2564\s*ทั้งหมด\s*(?<total_vaccinations>.{1,40})\s*โดส/,
   /เทศ\W*วัคซีนเข็มที่ 1 .{1,3}นวน (?<people_vaccinated>.{1,40})\s*ราย/,
   /รับ\s*วัคซีน\s*2\s*เข็ม\)\s*.{3}นวน\s*(?<people_fully_vaccinated>.{1,40})\s*ราย\s*เ/,
+  /เข็ม.{3}\s*3\s*.Booster\s*dose.\s*.{3}นวน\s*(?<booster_vaccinated>.{1,40})\s*ราย\s*เ/,
   /รับ\s*วัคซีน\s*ทั้งหมด\s*(?<total_dose_plus>.{1,40})\s*โดส/,
   /แยก\s*.{1,4}\s*.{1,3}ที่ได้รับวัคซีนเข็มที่\s*1\s*.{1,3}นวน\s*(?<first_dose_plus>.{1,40})\s*ราย/,
-  /วัคซีน 2 เข็ม\)\s*.{3}นวน\s*(?<second_dose_plus>.{1,40})\s*ราย\s*[วจ]/,
+  /2\s*เข็ม\W\s*.{3}นวน\s*(?<second_dose_plus>.{1,40})\s*ราย\s*แ/,
+  /3\s*\WBooster\s*dose\W\s*.{3}นวน\s*(?<third_dose_plus>.{1,40})\s*ราย\s*ห/,
 ]
 
 const crawl = async () => {
