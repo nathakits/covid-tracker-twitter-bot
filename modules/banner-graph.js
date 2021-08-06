@@ -42,7 +42,6 @@ const graph = async () => {
     // if 0 then change to null
     return el.third_dose_plus === "0" ? null : el.third_dose_plus
   })
-  console.log(thirdDosePlusArr);
   const totalDosePlusArr = sliced.map(el => Number(el.total_dose_plus))
   const labelArr = sliced.map(el => el.date)
   // average
