@@ -23,6 +23,9 @@ vacGiven = jsonfile.map(data => {
   // sinopharm
   const sinopharm1Cum = Number(data["Vac Given Sinopharm 1 Cum"])
   const sinopharm2Cum = Number(data["Vac Given Sinopharm 2 Cum"])
+  // pfizer
+  const pfizer1Cum = Number(data["Vac Given Pfizer 1 Cum"])
+  const pfizer2Cum = Number(data["Vac Given Pfizer 2 Cum"])
   // total
   const totalCum = astra1Cum + astra2Cum + sinovac1Cum + sinovac2Cum + sinopharm1Cum + sinopharm2Cum
   const map = {
@@ -33,6 +36,8 @@ vacGiven = jsonfile.map(data => {
     "sinovac_2_cum": sinovac2Cum,
     "sinopharm_1_cum": sinopharm1Cum,
     "sinopharm_2_cum": sinopharm2Cum,
+    "pfizer_1_cum": pfizer1Cum,
+    "pfizer_2_cum": pfizer2Cum,
     "total_cum": totalCum,
   }
   return map
