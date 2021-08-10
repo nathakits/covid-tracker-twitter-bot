@@ -16,7 +16,7 @@ let regexArray = [
   /รับ\s*วัคซีน\s*ทั้งหมด\s*(?<total_dose_plus>.{1,40})\s*โดส/,
   /แยก\s*.{1,4}\s*.{1,3}ที่ได้รับวัคซีนเข็มที่\s*1\s*.{1,3}นวน\s*(?<first_dose_plus>.{1,40})\s*ราย/,
   /2\s*เข็ม\W\s*.{3}นวน\s*(?<second_dose_plus>.{1,40})\s*ราย\s*แ/,
-  /3\s*\WBooster\s*dose\W\s*.{3}นวน\s*(?<third_dose_plus>.{1,40})\s*ราย\s*ห/,
+  /3\s*\WBooster\s*dose\W\s*.{3}นวน\s*(?<third_dose_plus>.{1,40})\s*ราย\s*จ/,
 ]
 
 const crawl = async () => {
