@@ -3,12 +3,14 @@ const jsonfile = require('../data/vac_timeline.json')
 
 allocation = jsonfile.map(data => {
   const astraAllocated = Number(data["Vac Allocated AstraZeneca"])
-  const sinovacAllocateed = Number(data["Vac Allocated Sinovac"])
+  const sinovacAllocated = Number(data["Vac Allocated Sinovac"])
+  const pfizerAllocated = Number(data["Vac Allocated Pfizer"])
   const map = {
     "date": data.Date,
     "allocated_astrazeneca": astraAllocated,
-    "allocated_sinovac": sinovacAllocateed,
-    "allocated_total": astraAllocated + sinovacAllocateed,
+    "allocated_sinovac": sinovacAllocated,
+    "allocated_pfizer": pfizerAllocated,
+    "allocated_total": astraAllocated + sinovacAllocated,
   }
   return map
 })
