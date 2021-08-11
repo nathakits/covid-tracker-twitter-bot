@@ -15,7 +15,7 @@ allocation = jsonfile.map(data => {
   return map
 })
 
-vacGiven = jsonfile.map(data => {
+vacGiven = jsonfile.map((data, i, array) => {
   // astra
   const astra1Cum = Number(data["Vac Given AstraZeneca 1 Cum"])
   const astra2Cum = Number(data["Vac Given AstraZeneca 2 Cum"])
@@ -34,12 +34,16 @@ vacGiven = jsonfile.map(data => {
     "date": data.Date,
     "astrazeneca_1_cum": astra1Cum,
     "astrazeneca_2_cum": astra2Cum,
+    "AstraZeneca": astra1Cum + astra2Cum,
     "sinovac_1_cum": sinovac1Cum,
     "sinovac_2_cum": sinovac2Cum,
+    "Sinovac": sinovac1Cum + sinovac2Cum,
     "sinopharm_1_cum": sinopharm1Cum,
     "sinopharm_2_cum": sinopharm2Cum,
+    "Sinopharm": sinopharm1Cum + sinopharm2Cum,
     "pfizer_1_cum": pfizer1Cum,
     "pfizer_2_cum": pfizer2Cum,
+    "Pfizer": pfizer1Cum + pfizer2Cum,
     "total_cum": totalCum,
   }
   return map
