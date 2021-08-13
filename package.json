@@ -9,6 +9,7 @@
     "tojson": "node --trace-warnings ./modules/csv2json.js",
     "streamcsv": "node --trace-warnings ./modules/streamCSV2json.js",
     "data2json": "node --trace-warnings ./modules/map-vac-timeline.js",
+    "testTweet": "node --trace-warnings ./modules/testTweet.js",
     "build": "node --trace-warnings index.js",
     "test": "node --trace-warnings test.js"
   },
