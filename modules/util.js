@@ -248,7 +248,7 @@ const combineData = (obj) => {
     const additionalData = {
       last_updated: currentDateTime,
       country: `Thailand`,
-      vaccines: [`Oxford/AstraZeneca`, `Sinovac`, `Sinopharm, Pfizer`]
+      vaccines: [`Oxford/AstraZeneca`, `Sinovac`, `Sinopharm`, `Pfizer`]
     }
     const combinedObj = {
       ...additionalData,
