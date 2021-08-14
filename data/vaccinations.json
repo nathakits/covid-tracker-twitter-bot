@@ -1,5 +1,5 @@
 {
-  "last_updated": "13-08-2021 11:22:9AM",
+  "last_updated": "14-08-2021 11:21:50AM",
   "country": "Thailand",
   "vaccines": [
     "Oxford/AstraZeneca",
@@ -7,14 +7,14 @@
     "Sinopharm",
     "Pfizer"
   ],
-  "date": "12-08-2021",
-  "total_vaccinations": "22,508,659",
-  "people_vaccinated": "17,239,593",
-  "people_fully_vaccinated": "4,855,000",
-  "booster_vaccinated": "414,066",
-  "total_dose_plus": "219,840",
-  "first_dose_plus": "171,488",
-  "second_dose_plus": "28,359",
-  "third_dose_plus": "19,993",
-  "source_url": "https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%20%202021-08-13.pdf"
+  "date": "13-08-2021",
+  "total_vaccinations": "23,192,491",
+  "people_vaccinated": "17,696,114",
+  "people_fully_vaccinated": "5,033,568",
+  "booster_vaccinated": "462,809",
+  "total_dose_plus": "683,832",
+  "first_dose_plus": "456,521",
+  "second_dose_plus": "178,568",
+  "third_dose_plus": "48,743",
+  "source_url": "https://ddc.moph.go.th/uploads/ckeditor2//files/Daily%20report%20%202021-08-14.pdf"
 }
