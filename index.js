@@ -2,6 +2,7 @@ require('dotenv').config()
 const util = require('./modules/util');
 const { tweetThread } = require('./modules/tweet');
 const data = require('./data/vaccinations.json');
+const fullData = require('./data/Thailand.json');
 const { graph } = require('./modules/banner-graph');
 
 // global vars
@@ -12,6 +13,21 @@ let barEmpty = '░'
 let barFull = '▓'
 let progressBarLength = 20
 let thread = [];
+let mismatch = ""
+
+// check total doses
+const prevData = fullData[fullData.length - 2]
+const latest = fullData[fullData.length - 1]
+const latestTotal = Number(latest.total_vaccinations)
+const total = Number(prevData.total_vaccinations) + Number(latest.total_dose_plus)
+if (total !== latestTotal) {
+  console.log(`Added total: ${total}`);
+  console.log(`CCSA total: ${latest.total_vaccinations}`);
+  console.log(`Total doses: doesn't add up`);
+  mismatch = `*`
+} else {
+  console.log(`Total doses: pass`);
+}
 
 // read scraped vaccine json and tweet
 const calcProgressBar = () => {
@@ -32,7 +48,7 @@ const calcProgressBar = () => {
   let progressNum1Dose = `\n\n1st dose: ${data.people_vaccinated} (+${data.first_dose_plus})`
   let progressNum2Dose = `\n2nd dose: ${data.people_fully_vaccinated} (+${data.second_dose_plus})`
   let progressNum3Dose = `\n3rd dose: ${data.booster_vaccinated} (+${data.third_dose_plus})`
-  let progressNumTotal = `\nTotal: ${data.total_vaccinations} (+${data.total_dose_plus})`
+  let progressNumTotal = `\nTotal: ${data.total_vaccinations} (+${data.total_dose_plus})${mismatch}`
   let dateOfData = `\n\n${data.date}`
   // combine all sections
   let progress = progressBar1 + progressBar2 + progressNum1Dose + progressNum2Dose + progressNum3Dose+ progressNumTotal + dateOfData
@@ -40,23 +56,23 @@ const calcProgressBar = () => {
   thread.push(progress)
   console.log(thread);
   // post tweet
-  tweetThread(thread)
-    .then(() => {
-      console.log(`Successfully tweeted: Post`);
-    }).catch(err => {
-      let errors = err.errors
-      console.log(errors);
-      process.exit(1)
-    });
-  // update banner
-  graph()
-    .then(() => {
-      console.log(`Successfully tweeted: Banner`);
-    }).catch(err => {
-      let errors = err.errors
-      console.log(errors);
-      process.exit(1)
-    });
+  // tweetThread(thread)
+  //   .then(() => {
+  //     console.log(`Successfully tweeted: Post`);
+  //   }).catch(err => {
+  //     let errors = err.errors
+  //     console.log(errors);
+  //     process.exit(1)
+  //   });
+  // // update banner
+  // graph()
+  //   .then(() => {
+  //     console.log(`Successfully tweeted: Banner`);
+  //   }).catch(err => {
+  //     let errors = err.errors
+  //     console.log(errors);
+  //     process.exit(1)
+  //   });
 }
 
 calcProgressBar()
