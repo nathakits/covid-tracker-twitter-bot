@@ -2,6 +2,10 @@ const fs = require('fs');
 const json2csv = require('json2csv').parse;
 const dailyJSON = require('../data/vaccinations.json')
 
+// const fullJSON = require('../data/Thailand.json')
+// const latest = fullJSON[fullJSON.length - 1]
+// const totalVac = Number(latest.total_vaccinations) + Number(dailyJSON.total_dose_plus.replace(/,/g, ""))
+
 const formatVaccines = (obj) => {
   const arr = obj.vaccines
   let vaccines = ""
