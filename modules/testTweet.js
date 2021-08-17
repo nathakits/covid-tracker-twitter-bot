@@ -1,8 +1,7 @@
 require('dotenv').config()
 const util = require('./util');
-const { tweetThread } = require('./tweet');
 const data = require('../data/vaccinations.json');
-const { graph } = require('./banner-graph');
+const fullData = require('../data/Thailand.json');
 
 // global vars
 // population data from OWID
@@ -12,6 +11,23 @@ let barEmpty = '░'
 let barFull = '▓'
 let progressBarLength = 20
 let thread = [];
+let mismatch = ""
+
+// check total doses
+const prevData = fullData[fullData.length - 1]
+const latest = data.total_dose_plus
+const latestTotal = Number(data.total_vaccinations.replace(/,/g, ""))
+const total = Number(prevData.total_vaccinations) + Number(latest.replace(/,/g, ""))
+if (total !== latestTotal) {
+  console.log(`Added total: ${total}`);
+  console.log(`CCSA total: ${latestTotal}`);
+  console.log(`Total doses: doesn't add up`);
+  mismatch = `*`
+} else {
+  console.log(`Added total: ${total}`);
+  console.log(`CCSA total: ${latestTotal}`);
+  console.log(`Total doses: pass`);
+}
 
 // read scraped vaccine json and tweet
 const calcProgressBar = () => {
@@ -32,7 +48,7 @@ const calcProgressBar = () => {
   let progressNum1Dose = `\n\n1st dose: ${data.people_vaccinated} (+${data.first_dose_plus})`
   let progressNum2Dose = `\n2nd dose: ${data.people_fully_vaccinated} (+${data.second_dose_plus})`
   let progressNum3Dose = `\n3rd dose: ${data.booster_vaccinated} (+${data.third_dose_plus})`
-  let progressNumTotal = `\nTotal: ${data.total_vaccinations} (+${data.total_dose_plus})`
+  let progressNumTotal = `\nTotal: ${data.total_vaccinations} (+${data.total_dose_plus})${mismatch}`
   let dateOfData = `\n\n${data.date}`
   // combine all sections
   let progress = progressBar1 + progressBar2 + progressNum1Dose + progressNum2Dose + progressNum3Dose+ progressNumTotal + dateOfData
