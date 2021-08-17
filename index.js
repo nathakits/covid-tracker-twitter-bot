@@ -56,23 +56,23 @@ const calcProgressBar = () => {
   thread.push(progress)
   console.log(thread);
   // post tweet
-  // tweetThread(thread)
-  //   .then(() => {
-  //     console.log(`Successfully tweeted: Post`);
-  //   }).catch(err => {
-  //     let errors = err.errors
-  //     console.log(errors);
-  //     process.exit(1)
-  //   });
-  // // update banner
-  // graph()
-  //   .then(() => {
-  //     console.log(`Successfully tweeted: Banner`);
-  //   }).catch(err => {
-  //     let errors = err.errors
-  //     console.log(errors);
-  //     process.exit(1)
-  //   });
+  tweetThread(thread)
+    .then(() => {
+      console.log(`Successfully tweeted: Post`);
+    }).catch(err => {
+      let errors = err.errors
+      console.log(errors);
+      process.exit(1)
+    });
+  // update banner
+  graph()
+    .then(() => {
+      console.log(`Successfully tweeted: Banner`);
+    }).catch(err => {
+      let errors = err.errors
+      console.log(errors);
+      process.exit(1)
+    });
 }
 
 calcProgressBar()
