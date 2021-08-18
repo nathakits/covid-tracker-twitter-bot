@@ -14,7 +14,7 @@ let thread = [];
 let mismatch = ""
 
 // check total doses
-const prevData = fullData[fullData.length - 1]
+const prevData = fullData[fullData.length - 2]
 const latest = data.total_dose_plus
 const latestTotal = Number(data.total_vaccinations.replace(/,/g, ""))
 const total = Number(prevData.total_vaccinations) + Number(latest.replace(/,/g, ""))
