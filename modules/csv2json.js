@@ -1,14 +1,16 @@
 const fs = require('fs');
 const path = require('path')
 const csv = require('csvtojson')
-const filePath = path.join(__dirname, '../data/Thailand.csv');
-const genJSON = async () => {
-  const data = await csv().fromFile(filePath)
+const rawData = path.join(__dirname, '../data/Thailand.csv');
+const correctedData = path.join(__dirname, '../data/th-dailytotal-test.csv');
+const genJSON = async (file, name) => {
+  const data = await csv().fromFile(file)
   let stringify = JSON.stringify(data)
-  fs.writeFile('data/Thailand.json', stringify, (err) => {
+  fs.writeFile(`data/${name}.json`, stringify, (err) => {
     if (err) throw err
     console.log(`Status: Complete`);
   });
 }
 
-genJSON()
+genJSON(rawData, 'Thailand')
+genJSON(correctedData, 'th-dailytotal-test')
