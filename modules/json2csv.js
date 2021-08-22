@@ -49,3 +49,4 @@ const write = async (fileName, data) => {
 }
 
 write('data/Thailand.csv', data)
+write('data/th-dailytotal-test.csv', data)
