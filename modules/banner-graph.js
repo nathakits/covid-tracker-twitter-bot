@@ -97,7 +97,8 @@ const graph = async () => {
           borderColor: thirdDoseColor,
           borderRadius: barRadius,
           datalabels: {
-            align: "start",
+            color: thirdDoseColor,
+            align: "end",
             anchor: "end",
           },
         },
@@ -213,7 +214,7 @@ const graph = async () => {
             // Call original function and bind scope in order to use `this` correctly inside it
             originalFit.bind(chart.legend)();
             // Change the height as suggested in another answers
-            this.height += 12;
+            this.height += 14;
           }
         }
       }
