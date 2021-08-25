@@ -6,6 +6,7 @@ const fullData = require('../data/Thailand.json');
 // global vars
 // population data from OWID
 // https://github.com/owid/covid-19-data/blob/master/scripts/input/un/population_2020.csv
+// 2021 population - 72,034,775
 let thailandPopulation = 69799978
 let barEmpty = '░'
 let barFull = '▓'
