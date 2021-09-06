@@ -68,6 +68,22 @@ const checkThirdDose = () => {
   }
 }
 
+const checkTotalSum = () => {
+  const total = Number(data.total_dose_plus.replace(/,/g, ""))
+  const first = Number(data.first_dose_plus.replace(/,/g, ""))
+  const second = Number(data.second_dose_plus.replace(/,/g, ""))
+  const third = Number(data.third_dose_plus.replace(/,/g, ""))
+  const sum = first + second + third
+  if (total !== sum) {
+    console.log(`Total Raw: ${total}`);
+    console.log(`Total Sum: ${sum}`);
+    console.log(`Anomaly Detected: Total doesn't add up`);
+  } else {
+    console.log(`Total Sum: Pass`);
+  }
+}
+
+
 // read scraped vaccine json and tweet
 const calcProgressBar = (population, str) => {
   let thread = [];
@@ -104,5 +120,6 @@ checkTotalDose()
 checkFirstDose()
 checkSecondDose()
 checkThirdDose()
+checkTotalSum()
 calcProgressBar(thailandPopulation2020, `2020 Population`)
-calcProgressBar(thailandPopulation2021, `2021 Population`)
+// calcProgressBar(thailandPopulation2021, `2021 Population`)
