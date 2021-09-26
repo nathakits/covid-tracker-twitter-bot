@@ -60,8 +60,7 @@ const calcPercentageCSV = (array, population) => {
 }
 
 const calcPercentageJSON = (num, population) => {
-  let vaccinated = num.replace(/\s|,/g, '')
-  let percentage = `${((vaccinated / population) * 100).toFixed(2)}`
+  let percentage = `${((num / population) * 100).toFixed(2)}`
   let parseNum = parseFloat(percentage)
   if (!isNaN(parseNum) && parseNum !== undefined) {
     return percentage

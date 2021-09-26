@@ -1,5 +1,5 @@
 const fs = require('fs');
-const jsonfile = require('../data/vac_timeline.json')
+const jsonfile = require('../../data/dylan/vac_timeline.json')
 
 allocation = jsonfile.map(data => {
   const astraAllocated = Number(data["Vac Allocated AstraZeneca"])
@@ -59,7 +59,7 @@ vacGiven = jsonfile.map((data, i, array) => {
 
 const genvacGivenJSON = async () => {
   let stringify = JSON.stringify(vacGiven)
-  fs.writeFile('data/vac_given.json', stringify, (err) => {
+  fs.writeFile('data/dylan/vac_given.json', stringify, (err) => {
     if (err) throw err
     console.log(`Status: Vac given Complete`);
   });
@@ -67,7 +67,7 @@ const genvacGivenJSON = async () => {
 
 const genAllocationJSON = async () => {
   let stringify = JSON.stringify(allocation)
-  fs.writeFile('data/vac_allocation.json', stringify, (err) => {
+  fs.writeFile('data/dylan/vac_allocation.json', stringify, (err) => {
     if (err) throw err
     console.log(`Status: Allocation Complete`);
   });

@@ -1,8 +1,8 @@
 const fs = require('fs');
-const path = require('path')
 const { ChartJSNodeCanvas } = require('chartjs-node-canvas');
 const ChartDataLabels = require('chartjs-plugin-datalabels');
 const csv = require('csvtojson')
+const data = require("../../data/dashboard/national-vacmod-timeseries.json")
 
 const Twitter = require('twitter-lite');
 const client = new Twitter({
@@ -16,7 +16,6 @@ const client = new Twitter({
 const width = 1500; //px
 const height = 500; //px
 const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height })
-const filePath = path.join(__dirname, '../data/Thailand.csv');
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
 const titleText = `Thailand's COVID-19 Daily Vaccination Rate`
 
@@ -34,15 +33,14 @@ const barRadius = 4
 // generate vaccination graph
 const graph = async () => {
   console.log(`Status: Creating graph...`);
-  const data = await csv().fromFile(filePath)
   const sliced = data.slice(Math.max(data.length - 14, 0))
-  const firstDosePlusArr = sliced.map(el => el.first_dose_plus)
-  const secondtDosePlusArr = sliced.map(el => el.second_dose_plus)
+  const firstDosePlusArr = sliced.map(el => el.first_dose_daily)
+  const secondtDosePlusArr = sliced.map(el => el.second_dose_daily)
   const thirdDosePlusArr = sliced.map(el => {
     // if 0 then change to null
-    return el.third_dose_plus === "0" ? null : el.third_dose_plus
+    return el.third_dose_daily === "0" ? null : el.third_dose_daily
   })
-  const totalDosePlusArr = sliced.map(el => Number(el.total_dose_plus))
+  const totalDosePlusArr = sliced.map(el => Number(el.total_vaccinations_daily))
   const labelArr = sliced.map(el => el.date)
   // average
   const calcAverage = (totalDosePlusArr.reduce(reducer) / 14)
@@ -226,7 +224,7 @@ const graph = async () => {
 
   console.log(`Status: Complete`);
 
-  fs.writeFile('data/vaccine_graph.png', imgBuffer, (err) => {
+  fs.writeFile('data/charts/vaccine_graph.png', imgBuffer, (err) => {
     if (err) throw err
     console.log(`Status: Image saved`);
   });
@@ -239,6 +237,7 @@ const graph = async () => {
     offset_top: 0,
   });
 }
+
 
 module.exports = {
   graph

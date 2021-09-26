@@ -1,0 +1,19 @@
+{
+  "last_updated": "25-09-2021 11:24:23AM",
+  "country": "Thailand",
+  "vaccines": [
+    "Oxford/AstraZeneca",
+    "Sinovac",
+    "Sinopharm",
+    "Pfizer"
+  ],
+  "date": "24-09-2021",
+  "total_vaccinations": "49,927,400",
+  "people_vaccinated": "31,279,249",
+  "people_fully_vaccinated": "17,580,105",
+  "booster_vaccinated": "1,068,046",
+  "total_dose_plus": "1,387,456",
+  "first_dose_plus": "0",
+  "second_dose_plus": "0",
+  "third_dose_plus": "0"
+}

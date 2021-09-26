@@ -1,5 +1,5 @@
 require('dotenv').config()
-const { tweetThread } = require('./modules/tweet');
+const { tweetThread } = require('./tweet');
 
 let randomNum = Math.floor(Math.random() * 101)
 let thread = [`Hello World ${randomNum}`];

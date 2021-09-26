@@ -1,15 +1,9 @@
 
 gen: ## test tweet
 	@echo "Update vaccine files..."
+	npm run fetch
+	npm run update
 	npm run tocsv
-	npm run tojson
-
-gen-test: ## test tweet
-	@echo "Update vaccine files..."
-	npm run tocsv
-	npm run tojson
-	@echo "Testing tweet..."
-	npm run testTweet
 
 dylan: ## test tweet
 	@echo "Update Dylan files..."

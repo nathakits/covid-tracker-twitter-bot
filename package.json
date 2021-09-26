@@ -4,14 +4,13 @@
   "description": "Covid vaccine tracker Twitter bot",
   "main": "index.js",
   "scripts": {
-    "scrape": "node --trace-warnings ./scraper/th-daily-v1.js",
-    "tocsv": "node --trace-warnings ./modules/json2csv.js",
-    "tojson": "node --trace-warnings ./modules/csv2json.js",
-    "streamcsv": "node --trace-warnings ./modules/streamCSV2json.js",
-    "data2json": "node --trace-warnings ./modules/map-vac-timeline.js",
-    "testTweet": "node --trace-warnings ./modules/testTweet.js",
-    "build": "node --trace-warnings index.js",
-    "test": "node --trace-warnings test.js"
+    "fetch": "node --trace-warnings ./modules/dashboard/fetch.js",
+    "update": "node --trace-warnings ./modules/dashboard/timeseries-json.js",
+    "tocsv": "node --trace-warnings ./modules/dashboard/json2csv.js",
+    "testTweet": "node --trace-warnings ./modules/dashboard/testTweet.js",
+    "streamcsv": "node --trace-warnings ./modules/dylan/streamCSV2json.js",
+    "data2json": "node --trace-warnings ./modules/dylan/map-vac-timeline.js",
+    "build": "node --trace-warnings index.js"
   },
   "repository": {
     "type": "git",
