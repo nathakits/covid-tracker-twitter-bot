@@ -1,0 +1,52 @@
+name: Scrape and Tweet
+
+on:
+  schedule:
+    - cron: '10 11 * * *' # 6:10pm 
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Scrape and Tweet - Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    # scrape data from MOPH
+    - name: Fetch The Researcher
+      run: npm run fetch
+    # incremental update to csv
+    - name: Update JSON
+      run: npm run update
+    # write full JSON
+    - name: Update CSV
+      run: npm run tocsv
+    # stream and write JSON
+    - name: Fetch and update Dylan data
+      run: npm run streamcsv
+      run: npm run data2json
+    # tweet and update banner
+    - name: Tweet and update banner
+      run: npm run build
+      env:
+       CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+       CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+       ACCESS_TOKEN_KEY: ${{ secrets.ACCESS_TOKEN_KEY }}
+       ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+    # commit and push to repo
+    - name: Commit and Push JSON
+      run: |
+        git config user.name "nathakits"
+        git config user.email nathakit.tan@gmail.com
+        git add .
+        git commit -m "[bot 🤖] auto update vaccine data"
+        git push
