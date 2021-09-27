@@ -5,8 +5,7 @@ const timeseriesjson = require('../../data/dashboard/national-vacmod-timeseries.
 const write = async (fileName, data) => {
   let rows;
   rows = json2csv(data, { header: true, quote: '' });
-  fs.appendFileSync(fileName, rows);
-  fs.appendFileSync(fileName, "\r\n");
+  fs.writeFileSync(fileName, rows);
 }
 
 console.log(`Status: Complete`)
