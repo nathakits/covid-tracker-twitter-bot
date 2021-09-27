@@ -12,6 +12,15 @@ const barEmpty = '░'
 const barFull = '▓'
 const progressBarLength = 20
 
+const checkDate = () => {
+  const date = new Date()
+  const day = date.getDate()
+  const month = date.getMonth() + 1
+  const year = date.getFullYear()
+  const fullDate = `${year}-${month < 10 ? "0" + month : month}-${day}`
+  return fullDate
+}
+
 const checkTotalSum = () => {
   const total = data.total_vaccinations_daily
   const first = data.first_dose_daily
@@ -22,9 +31,10 @@ const checkTotalSum = () => {
     console.log(`Total Raw: ${total}`);
     console.log(`Total Sum: ${sum}`);
     console.log(`Anomaly Detected: Total doesn't add up`);
-    process.exit(1)
+    return false
   } else {
     console.log(`Total Sum: Pass`);
+    return true
   }
 }
 
@@ -77,5 +87,14 @@ const calcProgressBar = () => {
     });
 }
 
-checkTotalSum()
-calcProgressBar()
+// check latest data with current day
+if (checkDate() === data.date) {
+  // check total sum
+  if (checkTotalSum()) {
+    calcProgressBar()
+  } else {
+    process.exit(1)
+  }
+} else {
+  process.exit(1)
+}
