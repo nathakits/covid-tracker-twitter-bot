@@ -2,7 +2,7 @@ name: Scrape and Tweet
 
 on:
   schedule:
-    - cron: '10 11 * * *' # 6:10pm 
+    - cron: '40 12 * * *' # 7:40pm 
   workflow_dispatch:
 
 jobs:
