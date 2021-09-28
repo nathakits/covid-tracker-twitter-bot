@@ -31,8 +31,9 @@ jobs:
     - name: Update CSV
       run: npm run tocsv
     # stream and write JSON
-    - name: Fetch and update Dylan data
+    - name: Fetch Dylan data
       run: npm run streamcsv
+    - name: Map Dylan data
       run: npm run data2json
     # tweet and update banner
     - name: Tweet and update banner
