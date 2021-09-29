@@ -9,8 +9,8 @@
 </h4>
 
 <div align="center">
-  <a href="https://github.com/nathakits/covid-tracker-twitter-bot/actions/workflows/scrape-tweet-cron.yml">
-    <img src="https://github.com/nathakits/covid-tracker-twitter-bot/actions/workflows/scrape-tweet-cron.yml/badge.svg" alt="Scrape and Tweet Cron CI">
+  <a href="https://github.com/nathakits/covid-tracker-twitter-bot/actions/workflows/fetch-tweet.yml">
+    <img src="https://github.com/nathakits/covid-tracker-twitter-bot/actions/workflows/fetch-tweet.yml/badge.svg" alt="Fetch and Tweet Cron CI">
   </a>
 </div>
 
