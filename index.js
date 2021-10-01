@@ -17,7 +17,7 @@ const checkDate = () => {
   const day = date.getDate()
   const month = date.getMonth() + 1
   const year = date.getFullYear()
-  const fullDate = `${year}-${month < 10 ? "0" + month : month}-${day}`
+  const fullDate = `${year}-${month < 10 ? "0" + month : month}-${day < 10 ? "0" + day : day}`
   return fullDate
 }
 
@@ -96,5 +96,7 @@ if (checkDate() === data.date) {
     process.exit(1)
   }
 } else {
+  console.log(checkDate());
+  console.log(data.date);
   process.exit(1)
 }
