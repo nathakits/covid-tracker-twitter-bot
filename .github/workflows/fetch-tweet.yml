@@ -1,4 +1,4 @@
-name: Dashboard bot
+name: Tweet Dashboard bot
 
 on:
   schedule:
