@@ -1,0 +1,45 @@
+name: Fetch Dashboard Data
+
+on:
+  schedule:
+    - cron: '15 18 * * *' # 01:15AM
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Scrape and Tweet - Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    # scrape data from MOPH
+    - name: Fetch The Researcher
+      run: npm run fetch
+    # incremental update to csv
+    - name: Update JSON
+      run: npm run update
+    # write full JSON
+    - name: Update CSV
+      run: npm run tocsv
+    # stream and write JSON
+    - name: Fetch Dylan data
+      run: npm run streamcsv
+    - name: Map Dylan data
+      run: npm run data2json
+    # commit and push to repo
+    - name: Commit and Push JSON
+      run: |
+        git config user.name "nathakits"
+        git config user.email nathakit.tan@gmail.com
+        git add .
+        git commit -m "[bot 🤖] auto update vaccine data"
+        git push
