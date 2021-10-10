@@ -2,7 +2,8 @@ name: Tweet Dashboard bot
 
 on:
   schedule:
-    - cron: '45 12 * * *' # 7:45pm 
+    # - cron: '45 12 * * *' # 7:45pm 
+    - cron: '15 06 * * *' # 13:15pm 
   workflow_dispatch:
 
 jobs:
