@@ -14,7 +14,7 @@ const progressBarLength = 20
 
 const checkDate = () => {
   const date = new Date()
-  const day = date.getDate()
+  const day = date.getDate() - 1
   const month = date.getMonth() + 1
   const year = date.getFullYear()
   const fullDate = `${year}-${month < 10 ? "0" + month : month}-${day < 10 ? "0" + day : day}`
