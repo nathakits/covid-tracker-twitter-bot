@@ -2,7 +2,7 @@ require('dotenv').config()
 const util = require('./modules/util');
 const { tweetThread } = require('./modules/tweet');
 const fullData = require('./data/dashboard/national-vacmod-timeseries.json');
-const data = fullData[fullData.length - 1]
+const latestData = fullData[fullData.length - 1]
 const { graph } = require('./modules/charts/banner-graph');
 
 // population data from OWID
@@ -22,10 +22,10 @@ const checkDate = () => {
 }
 
 const checkTotalSum = () => {
-  const total = data.total_vaccinations_daily
-  const first = data.first_dose_daily
-  const second = data.second_dose_daily
-  const third = data.third_dose_daily
+  const total = latestData.total_vaccinations_daily
+  const first = latestData.first_dose_daily
+  const second = latestData.second_dose_daily
+  const third = latestData.third_dose_daily
   const sum = first + second + third
   if (total !== sum) {
     console.log(`Total Raw: ${total}`);
@@ -38,14 +38,17 @@ const checkTotalSum = () => {
   }
 }
 
-const date = new Date(data.date)
-const day = date.getDate()
-const month = date.getMonth() + 1
-const year = date.getFullYear()
-const fullDate = `${day}-${month < 10 ? "0" + month : month}-${year}`
+const formatDate = (date) => {
+  const newDate = new Date(date)
+  const day = newDate.getDate()
+  const month = newDate.getMonth() + 1
+  const year = newDate.getFullYear()
+  const fullDate = `${day}-${month < 10 ? "0" + month : month}-${year}`
+  return fullDate
+}
 
 // read scraped vaccine json and tweet
-const calcProgressBar = () => {
+const calcProgressBar = (data) => {
   let thread = [];
   // today
   let percentage1Dose = util.calcPercentageJSON(data.first_dose_cum, thailandPopulation)
@@ -62,7 +65,7 @@ const calcProgressBar = () => {
   let progressNum2Dose = `\n2nd dose: ${data.second_dose_cum.toLocaleString()} (+${data.second_dose_daily.toLocaleString()})`
   let progressNum3Dose = `\n3rd dose: ${data.third_dose_cum.toLocaleString()} (+${data.third_dose_daily.toLocaleString()})`
   let progressNumTotal = `\nTotal: ${data.total_vaccinations_cum.toLocaleString()} (+${data.total_vaccinations_daily.toLocaleString()})`
-  let dateOfData = `\n\n${fullDate}`
+  let dateOfData = `\n\n${formatDate(data.date)}`
   // combine all sections
   let progress = progressBar1 + progressBar2 + progressNum1Dose + progressNum2Dose + progressNum3Dose+ progressNumTotal + dateOfData
   // add to array
@@ -77,7 +80,10 @@ const calcProgressBar = () => {
       console.log(errors);
       process.exit(1)
     });
-  graph()
+}
+
+const chart = (data) => {
+  graph(data)
     .then(() => {
       console.log(`Successfully tweeted: Banner`);
     }).catch(err => {
@@ -88,15 +94,23 @@ const calcProgressBar = () => {
 }
 
 // check latest data with current day
-if (checkDate() === data.date) {
+if (checkDate() === latestData.date) {
   // check total sum
   if (checkTotalSum()) {
-    calcProgressBar()
+    calcProgressBar(latestData)
+    chart(fullData)
   } else {
     process.exit(1)
   }
 } else {
-  console.log(checkDate());
-  console.log(data.date);
-  process.exit(1)
+  console.log(`Selecting yesterday's data`)
+  console.log(checkDate())
+  if (checkTotalSum()) {
+    const prevData = fullData[fullData.length - 2]
+    calcProgressBar(prevData)
+    fullData.pop()
+    chart(fullData)
+  } else {
+    process.exit(1)
+  }
 }
