@@ -1,8 +1,6 @@
 const fs = require('fs');
 const { ChartJSNodeCanvas } = require('chartjs-node-canvas');
 const ChartDataLabels = require('chartjs-plugin-datalabels');
-const csv = require('csvtojson')
-const data = require("../../data/dashboard/national-vacmod-timeseries.json")
 
 const Twitter = require('twitter-lite');
 const client = new Twitter({
@@ -31,7 +29,7 @@ const textColor = "#111827"
 const barRadius = 4
 
 // generate vaccination graph
-const graph = async () => {
+const graph = async (data) => {
   console.log(`Status: Creating graph...`);
   const sliced = data.slice(Math.max(data.length - 14, 0))
   const firstDosePlusArr = sliced.map(el => el.first_dose_daily)
@@ -48,8 +46,8 @@ const graph = async () => {
   const avgArr = new Array(14).fill(Math.round(calcAverage))
   // target
   const today = new Date()
-  const new_year=new Date(today.getFullYear(), 11, 31)
-  const one_day= (1000 * 60 * 60 * 24)
+  const new_year = new Date(today.getFullYear(), 11, 31)
+  const one_day = (1000 * 60 * 60 * 24)
   const days_left = Math.ceil((new_year.getTime() - today.getTime()) / (one_day))
   const targetDoses = (100 * 1000000)
   const targetAvgDose = Math.ceil(targetDoses / days_left)
@@ -237,7 +235,6 @@ const graph = async () => {
     offset_top: 0,
   });
 }
-
 
 module.exports = {
   graph
