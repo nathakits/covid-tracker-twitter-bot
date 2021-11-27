@@ -1,6 +1,7 @@
 const fs = require('fs');
 const axios = require('axios').default;
-const fileURL = "https://raw.githubusercontent.com/wiki/porames/the-researcher-covid-data/vaccination/national-vaccination-timeseries.json"
+const fileURL = "https://raw.githubusercontent.com/nathakits/the-researcher-covid-data/master/dataset/vaccination/national-vaccination-timeseries.json"
+// const fileURL = "https://raw.githubusercontent.com/wiki/porames/the-researcher-covid-data/vaccination/national-vaccination-timeseries.json"
 
 const genJSON = async () => {
   axios({
